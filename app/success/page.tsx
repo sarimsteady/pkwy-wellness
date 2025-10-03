@@ -116,7 +116,7 @@ export default function SuccessPage() {
               <div className="flex items-start gap-3">
                 <Receipt className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
                 <span className="text-gray-700">
-                  You're all set! Your payment has been processed successfully.
+                  You&apos;re all set! Your payment has been processed successfully.
                 </span>
               </div>
               <div className="flex items-start gap-3">
