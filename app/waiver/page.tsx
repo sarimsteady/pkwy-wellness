@@ -20,7 +20,7 @@ export default function WaiverPage() {
           </h1>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Welcome! Please fill out this waiver before participating in classes with Samantha Syed & Tabytha Bates. 
-            By submitting this form, you agree to the terms below.
+            By submitting this form, you&apos;re agreeing to the terms below.
           </p>
         </div>
 
