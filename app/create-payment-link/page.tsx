@@ -121,18 +121,18 @@ export default function GeneratePaymentLinkPage() {
 
                         <div className="space-y-2">
                             <Label htmlFor="customer" className="text-base font-medium">
-                                Customer Phone Number (optional)
+                                Customer Email (optional)
                             </Label>
                             <Input
                                 id="customer"
-                                type="tel"
-                                placeholder="(555) 123-4567"
+                                type="email"
+                                placeholder="customer@example.com"
                                 value={customer}
                                 onChange={(e) => setCustomer(e.target.value)}
                                 className="text-lg"
                             />
                             <p className="text-sm text-gray-500">
-                                Phone number of person expected to pay the amount.
+                                Email address of person expected to pay the amount.
                             </p>
                         </div>
 
