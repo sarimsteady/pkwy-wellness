@@ -2,24 +2,14 @@
 
 import React from 'react';
 import { Button } from '@/components/ui/button';
-import { Check, Instagram } from 'lucide-react';
+import { Instagram } from 'lucide-react';
 import { Fonts } from '@/config/fonts';
-import { getAllPackageMetadata } from '@/config/packages';
 import { Identity } from '@/config/identity';
 import { Separator } from '../decoration/separator';
 import Image from 'next/image';
 import { Amex, Applepay, Discover, Mastercard, Visa } from 'react-pay-icons';
-import { CheckoutButton } from './checkout-button';
 
 export function Pricing() {
-    const packages = getAllPackageMetadata();
-
-    // Helper function to format price from cents
-    const formatPrice = (priceInCents: number): string => {
-        return `$${(priceInCents / 100).toFixed(0)}`;
-    };
-
-
     return (
         <main id="pricing" >
             <div className={`flex bg-orange-200/100 min-h-screen items-center justify-center p-5 ${Fonts.crimsonText.className}`}>
@@ -31,18 +21,18 @@ export function Pricing() {
                             </h2>
                             <div className="space-y-2">
                                 <h1 className='text-5xl text-amber-900 font-bold tracking-widest'>
-                                    6 WEEK FLOW
+                                    COMING SOON
                                 </h1>
                                 <h2 className={`text-4xl font-light tracking-widest text-amber-900 ${Fonts.quicksand.className}`}>
-                                    For EveryBODY
+                                    Regular Classes
                                 </h2>
                             </div>
                             <h3 className='text-xl text-pink-600 tracking-widest'>
-                                Women&apos;s series
+                                Sunday Sessions
                             </h3>
                             <p className='text-amber-900 font-semibold text-lg'>
-                                This 6-week series is designed to build strength, balance, and confidence in a supportive space
-                                where women can grow, connect, and feel stronger from the inside out.
+                                We&apos;re excited to announce that we&apos;ve secured a location for regular Sunday Pilates classes! 
+                                Details and registration will be available soon.
                             </p>
 
                             <section className="bg-orange-300/30 rounded-2xl p-6 shadow-md space-y-6">
@@ -106,119 +96,35 @@ export function Pricing() {
                                 </div>
                             </section>
 
-                            {/* Assessment Section */}
-                            <section className="bg-orange-300/30 rounded-2xl p-6 shadow-md space-y-4">
-                                <h3 className="text-2xl font-semibold text-amber-900">
-                                    Body Assessment
-                                </h3>
-
-                                <p className='text-gray-600 font-light'>
-                                    We&apos;ll begin with a Body Assessment designed to give you a clear picture of where you&apos;re starting and a way to celebrate your progress at the end. The assessment highlights four key areas:
-                                </p>
-
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                                    <div className="bg-amber-900/10 border border-amber-900 shadow-lg rounded-lg p-3">
-                                        <h4 className="font-semibold text-amber-900 mb-1">Balance</h4>
-                                        <p className="text-gray-700 text-sm">how steady and grounded you feel</p>
-                                    </div>
-
-                                    <div className="bg-amber-900/10 border border-amber-900 shadow-lg rounded-lg p-3">
-                                        <h4 className="font-semibold text-amber-900 mb-1">Core strength</h4>
-                                        <p className="text-gray-700 text-sm">how deeply your core engages with control</p>
-                                    </div>
-
-                                    <div className="bg-amber-900/10 border border-amber-900 shadow-lg rounded-lg p-3">
-                                        <h4 className="font-semibold text-amber-900 mb-1">Flexibility</h4>
-                                        <p className="text-gray-700 text-sm">length and ease of movement, especially in the hamstrings</p>
-                                    </div>
-
-                                    <div className="bg-amber-900/10 border border-amber-900 shadow-lg rounded-lg p-3">
-                                        <h4 className="font-semibold text-amber-900 mb-1">Mobility</h4>
-                                        <p className="text-gray-700 text-sm">the freedom and comfort of your shoulder movement</p>
-                                    </div>
-                                </div>
-
-                                <p className="text-gray-700 italic">
-                                    This is not about judgment or numbers - it&apos;s about awareness, growth, and feeling stronger in your own body. We&apos;ll repeat the assessment in Week 6 so you can see and feel how far you&apos;ve come.
-                                </p>
-                            </section>
                             <Separator />
-                            <div className="space-y-2 text-center">
+                            <div className="space-y-6 text-center">
                                 <h1 className={`text-4xl text-gray-500 font-ultralight tracking-widest ${Fonts.quicksand.className}`}>
-                                    JOIN US NOW
+                                    STAY TUNED
                                 </h1>
-                                <p className="text-gray-600 text-lg">
-                                    Your journey to balance, confidence, and empowerment starts today.
-                                </p>
+                                <div className="bg-amber-100 rounded-2xl p-8 shadow-lg max-w-md mx-auto">
+                                    <h3 className="text-2xl font-bold text-amber-900 mb-4">Registration Opening Soon</h3>
+                                    <p className="text-gray-700 mb-6">
+                                        We&apos;re finalizing the details for our regular Sunday Pilates classes. 
+                                        Registration and class information will be available very soon!
+                                    </p>
+                                    <Button 
+                                        disabled
+                                        className="w-full bg-gray-400 cursor-not-allowed text-white font-semibold"
+                                    >
+                                        Coming Soon
+                                    </Button>
+                                </div>
                             </div>
                         </header>
-
-                        <div className="flex justify-center">
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl place-items-stretch">
-                                {packages.map((pkg) => (
-                                    <article
-                                        key={pkg.id}
-                                        className={`relative bg-amber-100 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow flex flex-col w-full max-w-sm h-full ${pkg.id === '6-week-early-bird' ? 'ring-2 ring-amber-500' : ''
-                                            }`}
-                                    >
-                                        {pkg.tag && (
-                                            <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                                                <span className={`${pkg.tagColor || 'bg-amber-500'} text-white px-4 py-2 rounded-full text-sm font-semibold`}>
-                                                    {pkg.tag}
-                                                </span>
-                                            </div>
-                                        )}
-
-                                        <header className="text-center space-y-2">
-                                            <h3 className="text-3xl font-bold text-amber-900">{pkg.subtitle || pkg.displayName}</h3>
-                                            <div className={`text-lg font-semibold ${Fonts.poppins.className}`}>
-                                                {pkg.previousPrice && (
-                                                    <span className="text-amber-900/70 line-through mr-2">
-                                                        {formatPrice(pkg.previousPrice)}
-                                                    </span>
-                                                )}
-                                                <span className="text-amber-900/70">
-                                                    {formatPrice(pkg.price)}
-                                                </span>
-                                            </div>
-                                        </header>
-
-                                        <ul className="space-y-2 flex-grow">
-                                            {pkg.features.map((feature, index) => (
-                                                <li key={index} className="flex items-center space-x-3 text-left">
-                                                    <Check className="w-5 h-5 text-green-500 flex-shrink-0" />
-                                                    <span className="text-gray-700">{feature}</span>
-                                                </li>
-                                            ))}
-                                        </ul>
-
-                                        <div className="pt-8">
-                                            <CheckoutButton
-                                                packageId={pkg.id}
-                                                popular={pkg.id === '6-week-early-bird'}
-                                                className={`${Fonts.poppins.className} hover:brightness-110 w-full font-semibold ${pkg.id === '6-week-early-bird'
-                                                    ? 'bg-gradient-to-r from-amber-900 to-amber-700'
-                                                    : 'bg-gradient-to-r from-amber-800 to-amber-900'
-                                                    }`}
-                                            >
-                                                Purchase
-                                            </CheckoutButton>
-                                        </div>
-                                    </article>
-                                ))}
-                            </div>
-                        </div>
                     </div>
 
                     {/* Please Note Section */}
                     <div className="text-center mt-6 px-10 md:px-20">
-                        <p className='text-lg font-semibold text-amber-900'>Please Note</p>
+                        <p className='text-lg font-semibold text-amber-900'>Location Details</p>
                         <div className="space-y-2">
                             <p className="text-gray-600 text-sm">
-                                <strong>Classes will be held in an upstairs space at the community center.</strong> {" "} Participants need to be able to climb two flights of stairs to access the workout area. Classes are planned for Sundays at 10:00 AM and will run for 45 minutes. We start on October 5th, 2025.
-                            </p>
-                            <p className="text-gray-600 text-sm">
-                                Our address is <strong>{Identity.address.complete}</strong> (Google Maps: <a href={Identity.address.googleMaps} target="_blank" className="text-blue-500">Link</a>, Apple Maps: <a href={Identity.address.appleMaps} target="_blank" className="text-blue-500">Link</a>)
+                                We&apos;ve secured a wonderful location for our regular Sunday Pilates classes. 
+                                Specific address and accessibility details will be shared when registration opens.
                             </p>
                         </div>
                     </div>
