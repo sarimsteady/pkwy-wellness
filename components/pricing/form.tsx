@@ -37,12 +37,12 @@ export function Pricing() {
 
                             <section className="bg-orange-300/30 rounded-2xl p-6 shadow-md space-y-6">
                                 <h3 className="text-2xl font-semibold text-amber-900">
-                                    Instructors
+                                    Instructor
                                 </h3>
 
-                                <div className="flex flex-col md:flex-row items-stretch gap-6">
+                                <div className="flex justify-center">
                                     {/* Samantha */}
-                                    <div className="flex flex-col items-center text-center flex-1">
+                                    <div className="flex flex-col items-center text-center max-w-sm">
                                         <Image
                                             src="/instructors/samantha.png"
                                             alt="Samantha Syed"
@@ -64,33 +64,6 @@ export function Pricing() {
 
                                         <p className="mt-2 text-gray-600 text-sm">
                                             Dedicated gym enthusiast since 2011 whose journey into self-knowledge and spiritual growth led her to obtaining her Pilates certification and holistic wellness.
-                                        </p>
-                                    </div>
-
-                                    {/* Tabytha */}
-                                    <div className="flex flex-col items-center text-center flex-1">
-                                        <Image
-                                            src="/instructors/tabytha.png"
-                                            alt="Tabytha Camille Bates"
-                                            width={128}
-                                            height={128}
-                                            className="w-32 h-32 rounded-full object-cover object-bottom shadow-lg"
-                                        />
-
-                                        <span className="mt-2 font-semibold text-amber-900 text-lg">Tabytha Camille Bates</span>
-
-                                        <a href="https://instagram.com/pittsburghpilates" target="_blank">
-                                            <Button
-                                                variant="outline"
-                                                className="mt-2 flex items-center gap-2 px-3 py-1 rounded-full border-2 border-pink-300 hover:border-pink-500 hover:bg-pink-50 transition-all duration-300 brightness-105 text-sm"
-                                            >
-                                                <Instagram className="w-4 h-4 text-pink-500 hover:text-pink-600 transition-colors duration-300" />
-                                                @pittsburghpilates
-                                            </Button>
-                                        </a>
-
-                                        <p className="mt-2 text-gray-600 text-sm">
-                                            A seasoned instructor with over 15 years of experience blending dance, education, and Pilates.
                                         </p>
                                     </div>
                                 </div>
