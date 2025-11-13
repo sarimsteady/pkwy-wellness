@@ -1,5 +1,5 @@
 export const Identity = {
-    name: "PKWY Pilates",
+    name: "PKWY Wellness",
     companyName: "PKWY Wellness",
     companyLegalName: "PKWY Wellness LLC",
     url: "https://pkwywellness.com",

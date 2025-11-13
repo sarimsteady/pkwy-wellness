@@ -3,13 +3,11 @@ import { Button } from '@/components/ui/button';
 import { Identity } from '@/config/identity';
 import { Fonts } from '@/config/fonts';
 import { Instagram } from 'lucide-react';
-import { GeometryLines } from '../decoration/geometry-lines';
 import { GeometryDots } from '../decoration/geometry-dots';
 
 export function Hero() {
   return (
     <main id="home" className="space-y-8">
-      <GeometryLines />
       <GeometryDots />
       <section className='space-y-4'>
         <div className='text-center'>

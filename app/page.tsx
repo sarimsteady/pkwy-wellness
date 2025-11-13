@@ -1,12 +1,12 @@
-import { Separator } from '@/components/decoration/separator';
 import { Hero } from '@/components/layout/hero';
 import { Pricing } from '@/components/pricing/form';
+import { WaitlistSection } from '@/components/waitlist/waitlist-section';
 
 export default function Home() {
   return (
     <div className="space-y-4 pt-4">
       <Hero />
-      <Separator />
+      <WaitlistSection />
       <Pricing />
       {/* TODO: */}
       {/* <Services /> */}

@@ -5,7 +5,6 @@ import { metadata } from "@/config/metadata";
 export { metadata };
 
 import { Fonts } from "@/config/fonts";
-import { FloatingBubbles } from "@/components/decoration/floating-bubbles";
 
 import { Analytics } from "@vercel/analytics/next"
 
@@ -18,8 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`antialiased ${Fonts.poppins.className}`} >
-        <FloatingBubbles />
+      <body className={`antialiased ${Fonts.sora.className}`} >
         <main>
           <Navbar />
           <div className="pt-36 bg-orange-200/10">

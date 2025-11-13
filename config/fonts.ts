@@ -1,4 +1,4 @@
-import { Quicksand, Playfair_Display, Poppins, Inter, Dancing_Script, Nunito, Crimson_Text } from "next/font/google";
+import { Quicksand, Playfair_Display, Poppins, Dancing_Script, Crimson_Text, Sora } from "next/font/google";
 
 export const quicksand = Quicksand({
     variable: "--font-quicksand",
@@ -30,10 +30,17 @@ export const crimsonText = Crimson_Text({
     weight: ["400", "600", "700"],
 });
 
+export const sora = Sora({
+    variable: "--font-sora",
+    subsets: ["latin"],
+    weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
+});
+
 export const Fonts = {
     quicksand,
     playfairDisplay,
     poppins,
     dancingScript,
     crimsonText,
+    sora,
 };

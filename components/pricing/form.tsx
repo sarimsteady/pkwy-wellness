@@ -6,8 +6,8 @@ import { Instagram } from 'lucide-react';
 import { Fonts } from '@/config/fonts';
 import { Identity } from '@/config/identity';
 import { Separator } from '../decoration/separator';
-import Image from 'next/image';
 import { Amex, Applepay, Discover, Mastercard, Visa } from 'react-pay-icons';
+import Image from 'next/image';
 
 export function Pricing() {
     return (
