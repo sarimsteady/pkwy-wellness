@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
-import { RefreshCw, LogOut, Users, Copy, Check } from 'lucide-react';
+import { LogOut, Users, Copy, Check } from 'lucide-react';
 
 interface WaitlistEntry {
   id: string;
@@ -97,37 +97,25 @@ export function WaitlistViewer() {
                 <p className="text-3xl font-bold text-gray-900">{entries.length}</p>
               </div>
             </div>
-            <div className="flex flex-wrap gap-2">
-              <Button
-                onClick={fetchWaitlist}
-                variant="outline"
-                size="sm"
-                disabled={isLoading}
-                className="flex items-center gap-2"
-              >
-                <RefreshCw className={`w-4 h-4 ${isLoading ? 'animate-spin' : ''}`} />
-                Refresh
-              </Button>
-              <Button
-                onClick={copyAllEmails}
-                variant="outline"
-                size="sm"
-                disabled={entries.length === 0}
-                className="flex items-center gap-2"
-              >
-                {isCopied ? (
-                  <>
-                    <Check className="w-4 h-4 text-green-600" />
-                    <span className="text-green-600">Copied!</span>
-                  </>
-                ) : (
-                  <>
-                    <Copy className="w-4 h-4" />
-                    Copy Emails
-                  </>
-                )}
-              </Button>
-            </div>
+            <Button
+              onClick={copyAllEmails}
+              variant="outline"
+              size="sm"
+              disabled={entries.length === 0}
+              className="flex items-center gap-2"
+            >
+              {isCopied ? (
+                <>
+                  <Check className="w-4 h-4 text-green-600" />
+                  <span className="text-green-600">Copied!</span>
+                </>
+              ) : (
+                <>
+                  <Copy className="w-4 h-4" />
+                  Copy Emails
+                </>
+              )}
+            </Button>
           </div>
         </Card>
 

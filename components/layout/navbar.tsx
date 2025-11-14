@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
-import { Menu, X, MapPin } from 'lucide-react';
+import { Menu, X, MapPin, Lock } from 'lucide-react';
 import { Identity } from '@/config/identity';
 
 export function Navbar() {
@@ -13,6 +13,7 @@ export function Navbar() {
     { href: '#home', label: 'Home' },
     { href: '#pricing', label: 'Book Class' },
     { href: Identity.social.instagram, label: 'Contact', external: true },
+    { href: '/staff', label: 'Staff' },
   ];
 
   return (
@@ -53,6 +54,23 @@ export function Navbar() {
                 >
                   {link.label}
                 </a>
+              ) : link.href === '/staff' ? (
+                <Link
+                  key={link.label}
+                  href={link.href}
+                  className="flex items-center gap-1.5 text-sm font-medium px-3 py-1.5 bg-orange-900 text-white hover:bg-orange-800 rounded-lg transition-colors duration-200"
+                >
+                  {/* <Lock className="w-3.5 h-3.5" /> */}
+                  {link.label}
+                </Link>
+              ) : link.href.startsWith('/') ? (
+                <Link
+                  key={link.label}
+                  href={link.href}
+                  className="text-sm font-medium text-gray-700 hover:text-pink-500 transition-colors duration-200"
+                >
+                  {link.label}
+                </Link>
               ) : (
                 <a
                   key={link.label}
@@ -95,6 +113,25 @@ export function Navbar() {
                   >
                     {link.label}
                   </a>
+                ) : link.href === '/staff' ? (
+                  <Link
+                    key={link.label}
+                    href={link.href}
+                    className="flex w-fit items-center gap-2 text-sm font-medium px-4 py-2 bg-orange-900 text-white hover:bg-orange-800 rounded-lg transition-colors duration-200"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    <Lock className="w-4 h-4" />
+                    {link.label}
+                  </Link>
+                ) : link.href.startsWith('/') ? (
+                  <Link
+                    key={link.label}
+                    href={link.href}
+                    className="text-sm font-medium text-gray-700 hover:text-pink-500 transition-colors duration-200 py-2"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {link.label}
+                  </Link>
                 ) : (
                   <a
                     key={link.label}
