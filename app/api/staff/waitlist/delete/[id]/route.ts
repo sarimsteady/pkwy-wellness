@@ -1,4 +1,4 @@
-import { NextResponse } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 import { cookies } from 'next/headers';
 import { supabase } from '@/lib/supabase';
 
@@ -9,7 +9,10 @@ async function isAuthenticated() {
   return authCookie?.value === 'authenticated';
 }
 
-export async function GET() {
+export async function DELETE(
+  request: NextRequest,
+  { params }: { params: Promise<{ id: string }> }
+) {
   try {
     // Check authentication
     if (!await isAuthenticated()) {
@@ -19,31 +22,32 @@ export async function GET() {
       );
     }
 
-    // Fetch waitlist from Supabase
-    const { data, error, count } = await supabase
+    const { id } = await params;
+
+    // Delete from Supabase
+    const { error } = await supabase
       .from('waitlist')
-      .select('*', { count: 'exact' })
-      .order('created_at', { ascending: false });
+      .delete()
+      .eq('id', id);
 
     if (error) {
-      console.error('Supabase error:', error);
+      console.error('Supabase delete error:', error);
       return NextResponse.json(
-        { error: 'Failed to fetch waitlist' },
+        { error: 'Failed to delete entry' },
         { status: 500 }
       );
     }
 
     return NextResponse.json(
-      {
+      { 
         success: true,
-        data,
-        count
+        message: 'Entry deleted successfully'
       },
       { status: 200 }
     );
 
   } catch (error) {
-    console.error('Waitlist fetch error:', error);
+    console.error('Delete error:', error);
     return NextResponse.json(
       { error: 'Internal server error' },
       { status: 500 }

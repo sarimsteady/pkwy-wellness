@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
-import { LogOut, Users, Copy, Check } from 'lucide-react';
+import { LogOut, Users, Copy, Check, Trash2 } from 'lucide-react';
 
 interface WaitlistEntry {
   id: string;
@@ -16,6 +16,7 @@ export function WaitlistViewer() {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState('');
   const [isCopied, setIsCopied] = useState(false);
+  const [deletingId, setDeletingId] = useState<string | null>(null);
 
   const fetchWaitlist = async () => {
     setIsLoading(true);
@@ -59,6 +60,36 @@ export function WaitlistViewer() {
       setTimeout(() => setIsCopied(false), 2000);
     } catch (error) {
       console.error('Failed to copy emails:', error);
+    }
+  };
+
+  const handleDelete = async (id: string, email: string) => {
+    if (!confirm(`Are you sure you want to remove ${email} from the waitlist?`)) {
+      return;
+    }
+
+    setDeletingId(id);
+    
+    try {
+      const response = await fetch(`/api/staff/waitlist/delete/${id}`, {
+        method: 'DELETE',
+      });
+
+      if (!response.ok) {
+        if (response.status === 401) {
+          window.location.reload();
+          return;
+        }
+        throw new Error('Failed to delete entry');
+      }
+
+      // Remove from local state
+      setEntries(entries.filter(entry => entry.id !== id));
+    } catch (error) {
+      console.error('Delete error:', error);
+      setError(error instanceof Error ? error.message : 'Failed to delete entry');
+    } finally {
+      setDeletingId(null);
     }
   };
 
@@ -153,6 +184,9 @@ export function WaitlistViewer() {
                     <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                       Date Added
                     </th>
+                    <th className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">
+                      Actions
+                    </th>
                   </tr>
                 </thead>
                 <tbody className="bg-white divide-y divide-gray-200">
@@ -169,6 +203,21 @@ export function WaitlistViewer() {
                           dateStyle: 'medium',
                           timeStyle: 'short',
                         })}
+                      </td>
+                      <td className="px-6 py-4 whitespace-nowrap text-right text-sm">
+                        <Button
+                          onClick={() => handleDelete(entry.id, entry.email)}
+                          disabled={deletingId === entry.id}
+                          variant="outline"
+                          size="sm"
+                          className="text-red-600 hover:text-red-700 hover:bg-red-50 border-red-200"
+                        >
+                          {deletingId === entry.id ? (
+                            <div className="inline-block w-4 h-4 border-2 border-red-600 border-t-transparent rounded-full animate-spin"></div>
+                          ) : (
+                            <Trash2 className="w-4 h-4" />
+                          )}
+                        </Button>
                       </td>
                     </tr>
                   ))}
