@@ -50,7 +50,7 @@ export function Navbar() {
                   href={link.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm font-medium text-gray-700 hover:text-pink-500 transition-colors duration-200"
+                  className="text-sm font-medium text-gray-700 hover:text-primary transition-colors duration-200"
                 >
                   {link.label}
                 </a>
@@ -58,7 +58,7 @@ export function Navbar() {
                 <Link
                   key={link.label}
                   href={link.href}
-                  className="flex items-center gap-1.5 text-sm font-medium px-3 py-1.5 bg-orange-900 text-white hover:bg-orange-800 rounded-lg transition-colors duration-200"
+                  className="flex items-center gap-1.5 text-sm font-medium px-3 py-1.5 bg-primary text-primary-foreground hover:bg-primary/90 rounded-lg transition-colors duration-200"
                 >
                   {/* <Lock className="w-3.5 h-3.5" /> */}
                   {link.label}
@@ -67,7 +67,7 @@ export function Navbar() {
                 <Link
                   key={link.label}
                   href={link.href}
-                  className="text-sm font-medium text-gray-700 hover:text-pink-500 transition-colors duration-200"
+                  className="text-sm font-medium text-gray-700 hover:text-primary transition-colors duration-200"
                 >
                   {link.label}
                 </Link>
@@ -75,7 +75,7 @@ export function Navbar() {
                 <a
                   key={link.label}
                   href={link.href}
-                  className="text-sm font-medium text-gray-700 hover:text-pink-500 transition-colors duration-200"
+                  className="text-sm font-medium text-gray-700 hover:text-primary transition-colors duration-200"
                 >
                   {link.label}
                 </a>
@@ -108,7 +108,7 @@ export function Navbar() {
                     href={link.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-sm font-medium text-gray-700 hover:text-pink-500 transition-colors duration-200 py-2"
+                    className="text-sm font-medium text-gray-700 hover:text-primary transition-colors duration-200 py-2"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     {link.label}
@@ -117,7 +117,7 @@ export function Navbar() {
                   <Link
                     key={link.label}
                     href={link.href}
-                    className="flex w-fit items-center gap-2 text-sm font-medium px-4 py-2 bg-orange-900 text-white hover:bg-orange-800 rounded-lg transition-colors duration-200"
+                    className="flex w-fit items-center gap-2 text-sm font-medium px-4 py-2 bg-primary text-primary-foreground hover:bg-primary/90 rounded-lg transition-colors duration-200"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     <Lock className="w-4 h-4" />
@@ -127,7 +127,7 @@ export function Navbar() {
                   <Link
                     key={link.label}
                     href={link.href}
-                    className="text-sm font-medium text-gray-700 hover:text-pink-500 transition-colors duration-200 py-2"
+                    className="text-sm font-medium text-gray-700 hover:text-primary transition-colors duration-200 py-2"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     {link.label}
@@ -136,7 +136,7 @@ export function Navbar() {
                   <a
                     key={link.label}
                     href={link.href}
-                    className="text-sm font-medium text-gray-700 hover:text-pink-500 transition-colors duration-200 py-2"
+                    className="text-sm font-medium text-gray-700 hover:text-primary transition-colors duration-200 py-2"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     {link.label}

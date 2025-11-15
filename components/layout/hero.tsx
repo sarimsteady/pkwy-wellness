@@ -7,7 +7,7 @@ import { GeometryDots } from '../decoration/geometry-dots';
 
 export function Hero() {
   return (
-    <main id="home" className="space-y-8">
+    <main id="home" className="space-y-8 mb-8">
       <GeometryDots />
       <section className='space-y-4'>
         <div className='text-center'>
@@ -20,13 +20,32 @@ export function Hero() {
         </div>
 
         <div className="flex justify-center items-center">
-          <Image
-            src="/branding/instructor.png"
-            alt="PKWY Wellness Instructor"
-            width={250}
-            height={250}
-            className="object-cover transition-transform duration-300 rounded-3xl"
-          />
+          <div className="relative group">
+            <Image
+              src="/branding/instructor.png"
+              alt="PKWY Wellness Instructor"
+              width={250}
+              height={250}
+              className="object-cover transition-transform duration-300 rounded-3xl"
+            />
+            {/* Instagram Button Overlay */}
+            <div className="absolute bottom-3 right-3">
+              <a
+                href={Identity.social.instagram}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition-all duration-300 hover:scale-105"
+              >
+                <Button
+                  variant="outline"
+                  className="flex items-center gap-2 px-3 py-1.5 rounded-full border-2 border-primary/50 bg-white/95 backdrop-blur-sm hover:border-primary hover:bg-white shadow-lg text-sm"
+                >
+                  <Instagram className="w-4 h-4 text-primary transition-colors duration-300" />
+                  <span className="text-primary font-medium">pkwypilates</span>
+                </Button>
+              </a>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -47,23 +66,6 @@ export function Hero() {
           >
             <Button variant='secondary'>
               Contact Me
-            </Button>
-          </a>
-        </div>
-
-        <div className='flex justify-center items-center'>
-          <a
-            href={Identity.social.instagram}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="transition-all duration-300 hover:scale-105 hover:brightness-110"
-          >
-            <Button
-              variant="outline"
-              className="flex items-center gap-2 px-4 py-2 rounded-full border-2 border-pink-300 hover:border-pink-500 hover:bg-pink-50 transition-all duration-300 brightness-105"
-            >
-              <Instagram className="w-5 h-5 text-pink-500 hover:text-pink-600 transition-colors duration-300" />
-              <span className="text-pink-500 font-medium">@pkwypilates</span>
             </Button>
           </a>
         </div>

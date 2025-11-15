@@ -118,7 +118,7 @@ export function WaitlistViewer() {
           <div className="flex gap-2">
             <Button
               onClick={() => setIsAddModalOpen(true)}
-              className="flex items-center gap-2 bg-pink-500 hover:bg-pink-600"
+              className="flex items-center gap-2"
             >
               <UserPlus className="w-4 h-4" />
               Add to Waitlist
@@ -138,8 +138,8 @@ export function WaitlistViewer() {
         <Card className="p-6 bg-white">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-4">
-              <div className="p-3 bg-pink-100 rounded-lg">
-                <Users className="w-6 h-6 text-pink-600" />
+              <div className="p-3 bg-primary/10 rounded-lg">
+                <Users className="w-6 h-6 text-primary" />
               </div>
               <div>
                 <p className="text-sm text-gray-600">Total Waitlist</p>
@@ -180,7 +180,7 @@ export function WaitlistViewer() {
 
           {isLoading && entries.length === 0 ? (
             <div className="text-center py-12">
-              <div className="inline-block w-8 h-8 border-4 border-pink-500 border-t-transparent rounded-full animate-spin"></div>
+              <div className="inline-block w-8 h-8 border-4 border-primary border-t-transparent rounded-full animate-spin"></div>
               <p className="mt-4 text-gray-600">Loading waitlist...</p>
             </div>
           ) : entries.length === 0 ? (

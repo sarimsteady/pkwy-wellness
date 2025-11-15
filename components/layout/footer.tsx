@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Identity } from '@/config/identity';
 import { Instagram, MapPin, Mail } from 'lucide-react';
+import { Applepay, Visa, Mastercard, Discover, Amex } from 'react-pay-icons';
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -10,7 +11,7 @@ export function Footer() {
   return (
     <footer className="relative bg-gray-50 border-t border-gray-200 overflow-hidden">
       {/* Subtle gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-pink-50/20 to-purple-50/20 pointer-events-none"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-secondary/5 to-primary/5 pointer-events-none"></div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Main Footer Content */}
@@ -40,17 +41,17 @@ export function Footer() {
             <h4 className="text-sm font-semibold text-gray-900 mb-4">Quick Links</h4>
             <ul className="space-y-3">
               <li>
-                <a href="#home" className="text-sm text-gray-600 hover:text-pink-500 transition-colors duration-200">
+                <a href="#home" className="text-sm text-gray-600 hover:text-primary transition-colors duration-200">
                   Home
                 </a>
               </li>
               <li>
-                <a href="#pricing" className="text-sm text-gray-600 hover:text-pink-500 transition-colors duration-200">
+                <a href="#pricing" className="text-sm text-gray-600 hover:text-primary transition-colors duration-200">
                   Book a Class
                 </a>
               </li>
               <li>
-                <a href="/waiver" className="text-sm text-gray-600 hover:text-pink-500 transition-colors duration-200">
+                <a href="/waiver" className="text-sm text-gray-600 hover:text-primary transition-colors duration-200">
                   Waiver
                 </a>
               </li>
@@ -62,20 +63,20 @@ export function Footer() {
             <h4 className="text-sm font-semibold text-gray-900 mb-4">Contact</h4>
             <ul className="space-y-3">
               <li>
-                <a 
+                <a
                   href={`mailto:${Identity.email}`}
-                  className="flex items-start gap-2 text-sm text-gray-600 hover:text-pink-500 transition-colors duration-200"
+                  className="flex items-start gap-2 text-sm text-gray-600 hover:text-primary transition-colors duration-200"
                 >
                   <Mail className="w-4 h-4 mt-0.5 flex-shrink-0" />
                   <span className="break-all">{Identity.email}</span>
                 </a>
               </li>
               <li>
-                <a 
+                <a
                   href={Identity.address.googleMaps}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-start gap-2 text-sm text-gray-600 hover:text-pink-500 transition-colors duration-200"
+                  className="flex items-start gap-2 text-sm text-gray-600 hover:text-primary transition-colors duration-200"
                 >
                   <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0" />
                   <span>{Identity.address.street}, {Identity.address.city}, {Identity.address.state} {Identity.address.zip}</span>
@@ -92,7 +93,7 @@ export function Footer() {
                 href={Identity.social.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 text-sm text-gray-600 hover:text-pink-500 transition-colors duration-200"
+                className="flex items-center gap-2 text-sm text-gray-600 hover:text-primary transition-colors duration-200"
               >
                 <Instagram className="w-4 h-4" />
                 <span>@pkwypilates</span>
@@ -102,12 +103,12 @@ export function Footer() {
                 <h5 className="text-xs font-semibold text-gray-700 uppercase tracking-wide">Legal</h5>
                 <ul className="space-y-2">
                   <li>
-                    <a href="/privacy-policy" className="text-xs text-gray-500 hover:text-pink-500 transition-colors duration-200">
+                    <a href="/privacy-policy" className="text-xs text-gray-500 hover:text-primary transition-colors duration-200">
                       Privacy Policy
                     </a>
                   </li>
                   <li>
-                    <a href="/terms-of-service" className="text-xs text-gray-500 hover:text-pink-500 transition-colors duration-200">
+                    <a href="/terms-of-service" className="text-xs text-gray-500 hover:text-primary transition-colors duration-200">
                       Terms of Service
                     </a>
                   </li>
@@ -125,8 +126,15 @@ export function Footer() {
             </p>
             <div className="flex items-center gap-2">
               <div className="flex items-center gap-1">
-                <div className="w-2 h-2 bg-pink-400 rounded-full animate-pulse"></div>
-                <span className="text-xs text-gray-500">Live Classes Available</span>
+                <div className="text-center space-y-2">
+                  <div className="flex justify-center items-center space-x-2">
+                    <Applepay className="w-6 h-6" />
+                    <Visa className="w-6 h-6" />
+                    <Mastercard className="w-6 h-6" />
+                    <Discover className="w-6 h-6" />
+                    <Amex className="w-6 h-6" />
+                  </div>
+                </div>
               </div>
             </div>
           </div>

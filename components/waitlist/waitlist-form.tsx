@@ -77,7 +77,7 @@ export function WaitlistForm({ onSuccess }: WaitlistFormProps = {}) {
           <Button
             type="submit"
             disabled={isLoading || status === 'success'}
-            className="absolute right-1 top-1 h-10 px-4 bg-pink-500 hover:bg-pink-600"
+            className="absolute right-1 top-1 h-10 px-4"
           >
             {isLoading ? (
               <span className="flex items-center gap-2">

@@ -48,8 +48,8 @@ export function LoginForm({ onSuccess }: LoginFormProps) {
       <div className="w-full max-w-md">
         <div className="bg-white rounded-2xl shadow-xl p-8 space-y-6">
           <div className="text-center space-y-2">
-            <div className="inline-flex items-center justify-center w-16 h-16 bg-pink-100 rounded-full mb-4">
-              <Lock className="w-8 h-8 text-pink-600" />
+            <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-4">
+              <Lock className="w-8 h-8 text-primary" />
             </div>
             <h1 className="text-2xl font-bold text-gray-900">Staff Access</h1>
             <p className="text-sm text-gray-600">Enter your password to continue</p>
@@ -80,7 +80,7 @@ export function LoginForm({ onSuccess }: LoginFormProps) {
             <Button
               type="submit"
               disabled={isLoading || !password}
-              className="w-full h-12 bg-pink-500 hover:bg-pink-600"
+              className="w-full h-12"
             >
               {isLoading ? 'Authenticating...' : 'Access Staff Portal'}
             </Button>

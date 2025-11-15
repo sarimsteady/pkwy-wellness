@@ -4,7 +4,7 @@ import { WaitlistSection } from '@/components/waitlist/waitlist-section';
 
 export default function Home() {
   return (
-    <div className="space-y-4 pt-4">
+    <div className="pt-4">
       <Hero />
       <WaitlistSection />
       <Pricing />

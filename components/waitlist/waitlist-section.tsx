@@ -5,13 +5,13 @@ export function WaitlistSection() {
   return (
     <section id="waitlist" className="relative overflow-hidden py-20 px-4">
       {/* Gradient Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-pink-50 via-purple-50 to-orange-50 opacity-50"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-secondary/10 via-primary/10 to-muted/20 opacity-50"></div>
       
       {/* Content */}
       <div className="relative max-w-4xl mx-auto text-center space-y-8">
         {/* Badge */}
-        <div className="inline-flex items-center justify-center px-4 py-2 bg-pink-100 rounded-full">
-          <span className="text-sm font-semibold text-pink-600 tracking-wide">
+        <div className="inline-flex items-center justify-center px-4 py-2 bg-secondary/20 rounded-full">
+          <span className="text-sm font-semibold text-secondary tracking-wide">
             JAN 2026 — COMING SOON
           </span>
         </div>
