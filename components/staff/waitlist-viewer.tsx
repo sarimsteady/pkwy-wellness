@@ -3,7 +3,9 @@
 import { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
-import { LogOut, Users, Copy, Check, Trash2 } from 'lucide-react';
+import { LogOut, Users, Copy, Check, Trash2, UserPlus } from 'lucide-react';
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogBody } from '@/components/ui/dialog';
+import { WaitlistForm } from '@/components/waitlist/waitlist-form';
 
 interface WaitlistEntry {
   id: string;
@@ -17,6 +19,7 @@ export function WaitlistViewer() {
   const [error, setError] = useState('');
   const [isCopied, setIsCopied] = useState(false);
   const [deletingId, setDeletingId] = useState<string | null>(null);
+  const [isAddModalOpen, setIsAddModalOpen] = useState(false);
 
   const fetchWaitlist = async () => {
     setIsLoading(true);
@@ -93,6 +96,12 @@ export function WaitlistViewer() {
     }
   };
 
+  const handleAddSuccess = () => {
+    // Refresh the list and close modal
+    fetchWaitlist();
+    setIsAddModalOpen(false);
+  };
+
   useEffect(() => {
     fetchWaitlist();
   }, []);
@@ -106,14 +115,23 @@ export function WaitlistViewer() {
             <h1 className="text-3xl font-bold text-gray-900">Staff Portal</h1>
             <p className="text-gray-600 mt-1">Current waitlist</p>
           </div>
-          <Button
-            onClick={handleLogout}
-            variant="outline"
-            className="flex items-center gap-2"
-          >
-            <LogOut className="w-4 h-4" />
-            Logout
-          </Button>
+          <div className="flex gap-2">
+            <Button
+              onClick={() => setIsAddModalOpen(true)}
+              className="flex items-center gap-2 bg-pink-500 hover:bg-pink-600"
+            >
+              <UserPlus className="w-4 h-4" />
+              Add to Waitlist
+            </Button>
+            <Button
+              onClick={handleLogout}
+              variant="outline"
+              className="flex items-center gap-2"
+            >
+              <LogOut className="w-4 h-4" />
+              Logout
+            </Button>
+          </div>
         </div>
 
         {/* Stats Card */}
@@ -227,6 +245,21 @@ export function WaitlistViewer() {
           )}
         </Card>
       </div>
+
+      {/* Add to Waitlist Modal */}
+      <Dialog open={isAddModalOpen} onOpenChange={setIsAddModalOpen}>
+        <DialogContent>
+          <DialogHeader onClose={() => setIsAddModalOpen(false)}>
+            <DialogTitle>Add to Waitlist</DialogTitle>
+            <DialogDescription>
+              Manually add an email address to the waitlist
+            </DialogDescription>
+          </DialogHeader>
+          <DialogBody>
+            <WaitlistForm onSuccess={handleAddSuccess} />
+          </DialogBody>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 }
