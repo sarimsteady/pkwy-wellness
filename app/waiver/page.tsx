@@ -3,7 +3,7 @@ import { Identity } from "@/config/identity";
 
 export const metadata: Metadata = {
   title: "Pilates Waiver & Release of Liability",
-  description: "Complete your Pilates waiver and release of liability form before participating in classes with Samantha Syed & Tabytha Bates.",
+  description: "Complete your Pilates waiver and release of liability form before participating in classes with Samantha Syed",
   openGraph: {
     title: "Pilates Waiver & Release of Liability | PKWY Wellness",
     description: "Complete your Pilates waiver and release of liability form before participating in classes.",
@@ -19,7 +19,7 @@ export default function WaiverPage() {
             Pilates Waiver & Release of Liability
           </h1>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Welcome! Please fill out this waiver before participating in classes with Samantha Syed & Tabytha Bates. 
+            Welcome! Please fill out this waiver before participating in classes with Samantha Syed. 
             By submitting this form, you&apos;re agreeing to the terms below.
           </p>
         </div>
