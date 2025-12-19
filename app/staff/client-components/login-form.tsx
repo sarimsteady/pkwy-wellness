@@ -66,8 +66,6 @@ export function LoginForm() {
                             </div>
                         )}
                     </div>
-                </CardContent>
-                <CardFooter>
                     <Button
                         type="submit"
                         disabled={isLoading || !password}
@@ -75,7 +73,7 @@ export function LoginForm() {
                     >
                         {isLoading ? 'Authenticating...' : 'Enter'}
                     </Button>
-                </CardFooter>
+                </CardContent>
             </Card>
         </main>
     );

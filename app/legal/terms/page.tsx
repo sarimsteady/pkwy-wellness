@@ -1,4 +1,14 @@
 import { About } from "@/config/about";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Terms of Service",
+  description: "Review our terms of service",
+  openGraph: {
+    title: "Terms of Service | PKWY Wellness",
+    description: "Review our terms of service",
+  },
+};
 
 export default function Page() {
   return (

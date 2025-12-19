@@ -12,7 +12,7 @@ export function Navbar() {
   const navLinks = [
     { href: '/', label: 'Home' },
     { href: '/book', label: 'Book Class' },
-    { href: About.social.instagram, label: 'Contact', external: true },
+    { href: '/contact', label: 'Contact', external: true },
     { href: '/staff', label: 'Staff' },
   ];
 

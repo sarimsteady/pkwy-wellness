@@ -1,5 +1,3 @@
-'use client';
-
 import { About } from '@/config/about';
 import { GeometryDots } from '@/components/decoration/geometry-dots';
 import { InstagramIcon } from '@/components/icons/instagram';
@@ -12,6 +10,15 @@ import {
   CardTitle,
 } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+
+export const metadata = {
+  title: "Contact",
+  description: "Get in touch with us at PKWY Wellness",
+  openGraph: {
+    title: "Contact | PKWY Wellness",
+    description: "Get in touch with us at PKWY Wellness",
+  },
+};
 
 export default function ContactPage() {
   return (
@@ -52,7 +59,6 @@ export default function ContactPage() {
                   variant="default" 
                   size="lg"
                   className="w-full"
-                  onClick={(e) => e.preventDefault()}
                 >
                   Send Email
                 </Button>
@@ -85,7 +91,6 @@ export default function ContactPage() {
                   variant="secondary" 
                   size="lg"
                   className="w-full"
-                  onClick={(e) => e.preventDefault()}
                 >
                   Visit Instagram
                 </Button>

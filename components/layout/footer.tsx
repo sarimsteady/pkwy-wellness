@@ -67,7 +67,7 @@ export function Footer() {
                   href={`mailto:${About.email}`}
                   className="flex items-center gap-2 text-sm text-gray-600 hover:text-primary transition-colors duration-200"
                 >
-                  <MailboxIcon className="w-8 h-8 flex-shrink-0" />
+                  <MailboxIcon className="w-4 h-4 flex-shrink-0" />
                   <span className="break-all">{About.email}</span>
                 </a>
               </li>

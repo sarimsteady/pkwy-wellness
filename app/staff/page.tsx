@@ -10,6 +10,16 @@ import {
     TabsList,
     TabsTrigger,
 } from "@/components/ui/tabs"
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "Staff Portal",
+    description: "Staff management portal for PKWY Wellness",
+    openGraph: {
+        title: "Staff Portal | PKWY Wellness",
+        description: "Staff management portal for PKWY Wellness",
+    },
+};
 
 export default async function Page() {
     const authenticated = await isAuthenticated();

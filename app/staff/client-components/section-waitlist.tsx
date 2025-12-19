@@ -20,41 +20,44 @@ export async function WaitlistSection() {
             <main className="space-y-2">
                 <section className="flex gap-2 items-center justify-between">
                     <div className="font-mono">
-                        <p className="text-5xl">
+                        <p className="text-7xl">
                             {data.length}
                         </p>
                         <p>Waitlist entries</p>
                     </div>
                     <CopyTextButton label="Copy All Emails" copyText={data.map(i => i.email).join(", ")} />
                 </section>
-                <div className="p-2 bg-slate-100 rounded-md space-y-3">
+                <div className="p-3 bg-slate-100 rounded-2xl space-y-3">
                     {data.map(i => {
                         return (
-                            <div key={i.id} className="font-mono flex justify-between">
-                                <section>
-                                    <p>
-                                        <strong>{new Date(i.created_at).toLocaleString('en-US', {
-                                            dateStyle: 'medium',
-                                            timeStyle: 'short',
-                                        })}</strong>
-                                    </p>
-                                    <p>
-                                        {i.email}
-                                    </p>
-                                </section>
-                                <section className="flex">
-                                    <CopyTextButton copyText={i.email} variant="icon" />
-                                    <form action={deleteWaitlistEntry}>
-                                        <input type="hidden" name="id" value={i.id} />
-                                        <Button
-                                            size="icon"
-                                            variant="destructive"
-                                            type="submit"
-                                        >
-                                            <TrashIcon />
-                                        </Button>
-                                    </form>
-                                </section>
+                            <div key={i.id}>
+                                <div className="font-mono flex justify-between">
+                                    <section>
+                                        <p>
+                                            <strong>{new Date(i.created_at).toLocaleString('en-US', {
+                                                dateStyle: 'medium',
+                                                timeStyle: 'short',
+                                            })}</strong>
+                                        </p>
+                                        <p>
+                                            {i.email}
+                                        </p>
+                                    </section>
+                                    <section className="flex">
+                                        <CopyTextButton copyText={i.email} variant="icon" />
+                                        <form action={deleteWaitlistEntry}>
+                                            <input type="hidden" name="id" value={i.id} />
+                                            <Button
+                                                size="icon"
+                                                variant="destructive"
+                                                type="submit"
+                                            >
+                                                <TrashIcon />
+                                            </Button>
+                                        </form>
+                                    </section>
+                                </div>
+                                <hr className="my-1" />
                             </div>
                         )
                     })}

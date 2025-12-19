@@ -1,5 +1,15 @@
 import { Suspense } from 'react';
 import { PaymentSuccessContent } from './success-content';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Thank You",
+  description: "Thank you for choosing PKWY Wellness",
+  openGraph: {
+    title: "Thank You | PKWY Wellness",
+    description: "Thank you for choosing PKWY Wellness",
+  },
+}
 
 export default function PaymentSuccessPage() {
   return (

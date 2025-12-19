@@ -7,7 +7,7 @@ import { Fonts } from '@/config/fonts';
 import { GeometryDots } from '../decoration/geometry-dots';
 import { InstagramIcon } from '../icons/instagram';
 
-export function Hero() {
+export function HeroSection() {
   return (
     <main id="home" className="space-y-8 mb-8 p-8">
       <GeometryDots />

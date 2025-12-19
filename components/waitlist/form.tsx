@@ -13,7 +13,7 @@ export function WaitlistForm() {
     );
 
     return (
-        <div className="w-full max-w-md mx-auto bg-secondary">
+        <div className="w-full max-w-md mx-auto bg-red-100/10 rounded-lg">
             <form action={formAction} className="space-y-4">
                 <div className="relative">
                     <Input
@@ -31,7 +31,7 @@ export function WaitlistForm() {
                     >
                         {isPending ? (
                             <span className="flex items-center gap-2">
-                                <span className="inline-block w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></span>
+                                <span className="inline-block w-4 h-4 rounded-full animate-spin"></span>
                                 Joining...
                             </span>
                         ) : state.success ? (
