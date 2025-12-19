@@ -2,7 +2,6 @@
 
 import { useActionState } from "react";
 import { Input } from "../ui/input";
-import { supabaseClient } from "@/utils/supabase-client";
 import { addToWaitlistAction } from "./server-functions";
 import { Button } from "../ui/button";
 import { AlertCircleIcon, ArrowRightIcon, CheckCircle2Icon } from "lucide-react";

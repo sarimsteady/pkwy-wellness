@@ -65,7 +65,7 @@ export function PaymentSuccessContent() {
               Payment Verification Failed
             </CardTitle>
             <CardDescription>
-              We couldn't verify your payment. Please contact {About.companyName} if you have any questions.
+              We couldn&apos;t verify your payment. Please contact {About.companyName} if you have any questions.
             </CardDescription>
           </CardHeader>
           <CardContent className="text-center">

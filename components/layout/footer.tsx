@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { About } from '@/config/about';
 import { Applepay, Visa, Mastercard, Discover, Amex } from 'react-pay-icons';
-import { MailboxIcon, MapPinIcon } from 'lucide-react';
+import { MailboxIcon } from 'lucide-react';
 import { InstagramIcon } from '../icons/instagram';
 
 export function Footer() {
@@ -46,9 +46,9 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a href="/#book" className="text-sm text-gray-600 hover:text-primary transition-colors duration-200">
+                <Link href="/#book" className="text-sm text-gray-600 hover:text-primary transition-colors duration-200">
                   Book a Class
-                </a>
+                </Link>
               </li>
               <li>
                 <a href="/waiver" className="text-sm text-gray-600 hover:text-primary transition-colors duration-200">
