@@ -1,8 +1,8 @@
 import { CircleDollarSignIcon, NewspaperIcon } from "lucide-react";
-import { LoginForm } from "./client-components/login-form";
-import { LogoutButton } from "./client-components/logout-button";
-import { CreateInvoiceSection } from "./client-components/section-create-invoice";
-import { WaitlistSection } from "./client-components/section-waitlist";
+import { LoginForm } from "./mini-components/login-form";
+import { LogoutButton } from "./mini-components/logout-button";
+import { InvoiceSection } from "./section-create-invoice";
+import { WaitlistSection } from "./section-waitlist";
 import { isAuthenticated } from "./server-functions/auth-session";
 import {
     Tabs,
@@ -57,7 +57,7 @@ export default async function Page() {
                         <WaitlistSection />
                     </TabsContent>
                     <TabsContent value="create-invoice">
-                        <CreateInvoiceSection />
+                        <InvoiceSection />
                     </TabsContent>
                 </Tabs>
             </section>

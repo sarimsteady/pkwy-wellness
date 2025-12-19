@@ -13,15 +13,15 @@ export function WaitlistForm() {
     );
 
     return (
-        <div className="w-full max-w-md mx-auto bg-red-100/10 rounded-lg">
-            <form action={formAction} className="space-y-4">
+        <div className="w-full max-w-md mx-auto rounded-lg">
+            <form action={formAction}>
                 <div className="relative">
                     <Input
                         type="email"
                         name="email"
                         placeholder="Enter your email"
                         disabled={isPending || state.success}
-                        className="pr-32 h-12 text-base"
+                        className="pr-32 h-12 text-base bg-blue-400/10 "
                         required
                     />
                     <Button
@@ -50,7 +50,7 @@ export function WaitlistForm() {
 
                 {state.message && (
                     <div
-                        className={`flex items-center gap-2 p-3 rounded-lg text-sm ${state.success
+                        className={`mt-1 flex items-center gap-2 p-3 rounded-lg text-xs ${state.success
                             ? 'bg-green-50 text-green-700 border border-green-200'
                             : 'bg-red-50 text-red-700 border border-red-200'
                             }`}
@@ -65,7 +65,7 @@ export function WaitlistForm() {
                 )}
 
                 {state.error && (
-                    <div className="flex items-center gap-2 p-3 rounded-lg text-sm bg-red-50 text-red-700 border border-red-200">
+                    <div className="mt-1 flex items-center gap-2 p-3 rounded-lg text-xs bg-red-50 text-red-700 border border-red-200">
                         <AlertCircleIcon className="w-4 h-4 flex-shrink-0" />
                         <span>{state.error}</span>
                     </div>

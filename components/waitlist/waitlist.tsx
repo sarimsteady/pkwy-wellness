@@ -9,8 +9,8 @@ export function WaitlistSection() {
       {/* Content */}
       <div className="relative max-w-4xl mx-auto text-center space-y-8">
         {/* Badge */}
-        <div className="inline-flex items-center justify-center px-4 py-2 bg-red-100 rounded-full">
-          <span className="text-sm font-semibold text-red-400 tracking-wide">
+        <div className="inline-flex items-center justify-center px-4 py-2 bg-orange-300/30 rounded-full">
+          <span className="text-sm font-semibold text-orange-600 tracking-wide">
             JAN 2026 — COMING SOON
           </span>
         </div>

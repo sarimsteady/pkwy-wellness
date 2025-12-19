@@ -9,7 +9,7 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="relative bg-gray-50 border-t border-gray-200 overflow-hidden">
+    <footer className="relative mt-1 bg-gray-50 border-t border-gray-200 overflow-hidden rounded-4xl">
       {/* Subtle gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-secondary/5 to-primary/5 pointer-events-none"></div>
 

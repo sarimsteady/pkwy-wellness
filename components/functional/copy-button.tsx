@@ -8,9 +8,10 @@ interface CopyTextButtonProps {
     copyText: string;
     label?: string;
     variant?: 'default' | 'icon';
+    className?: string;
 }
 
-export function CopyTextButton({ label, copyText, variant }: CopyTextButtonProps) {
+export function CopyTextButton({ label, copyText, variant, className }: CopyTextButtonProps) {
 
     const [isCopied, setIsCopied] = useState(false);
 
@@ -25,7 +26,7 @@ export function CopyTextButton({ label, copyText, variant }: CopyTextButtonProps
     }
 
     return (
-        <Button variant="secondary" onClick={handleCopy}>
+        <Button variant="secondary" onClick={handleCopy} className={className}>
             {isCopied ? (
                 <>
                     <CheckIcon className="w-4 h-4 text-green-600" />

@@ -5,7 +5,7 @@ export default function Page() {
     return (
         <main>
             <HeroSection />
-            <section className="book bg-orange-100/10">
+            <section className="book bg-orange-400/10 rounded-4xl">
                 <WaitlistSection />
             </section>
         </main>

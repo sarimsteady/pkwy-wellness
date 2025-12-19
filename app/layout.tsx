@@ -16,8 +16,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${Fonts.sora.variable} ${Fonts.mono.variable}`}>
-      <body className={`antialiased ${Fonts.sora.className}`} >
+    <html
+      lang="en"
+      className={`${Fonts.sora.variable} ${Fonts.mono.variable}`}
+      suppressHydrationWarning
+    >
+      <body className={`antialiased ${Fonts.sora.className}`} suppressHydrationWarning>
         <main>
           <Navbar />
           <div className="sticky min-h-screen h-full">

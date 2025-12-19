@@ -7,7 +7,7 @@ import { AlertCircleIcon } from "lucide-react";
 import { useState } from "react";
 import { verifyStaffPassword } from "../server-functions/verify-staff-password";
 import { setAuthCookie } from "../server-functions/auth-session";
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useRouter } from "next/navigation";
 
 export function LoginForm() {
