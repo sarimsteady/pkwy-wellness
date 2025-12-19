@@ -1,3 +1,4 @@
+import { Button } from "@/components/ui/button";
 import { Fonts } from "@/config/fonts";
 import { Database } from "@/types/database";
 import { CalendarCheckIcon, ClockIcon } from "lucide-react";
@@ -21,7 +22,12 @@ export async function SundayClasses({ classes }: { classes: Database['public']['
                                     <p className="text-gray-600">
                                         {c.description}
                                     </p>
-                                    <hr className="mt-8" />
+                                    <Button size="lg">
+                                        <p className={`text-lg font-light p-3 ${Fonts.sora.className}`}>
+                                            Sign Up
+                                        </p>
+                                    </Button>
+                                    <hr />
                                     <div className="flex justify-between gap-4">
                                         <p className="text-gray-600">
                                             {c.classes} class{isRecurring ? 'es' : ''}
@@ -46,7 +52,6 @@ export async function SundayClasses({ classes }: { classes: Database['public']['
                                         )}
                                     </div>
                                 </div>
-                                {/* • */}
                             </div>
                         )
                     })}
