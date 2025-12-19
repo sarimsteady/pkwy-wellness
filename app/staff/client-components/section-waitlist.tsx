@@ -6,7 +6,7 @@ import { deleteWaitlistEntry } from "../server-functions/delete-waitlist-entry";
 
 export async function WaitlistSection() {
 
-    const { data, error } = await supabaseClient
+    const { data, error } = await supabaseClient()
         .from("waitlist")
         .select("*")
         .order("created_at", { ascending: false });

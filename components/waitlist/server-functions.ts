@@ -43,7 +43,7 @@ async function addToWaitlist(email: string) {
     const normalizedEmail = normalizeEmail(email);
 
     // Insert into Supabase
-    const { data, error } = await supabaseClient
+    const { data, error } = await supabaseClient()
         .from('waitlist')
         .insert([{ email: normalizedEmail }])
         .select();

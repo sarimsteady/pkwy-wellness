@@ -6,7 +6,7 @@ import { revalidatePath } from "next/cache";
 export async function deleteWaitlistEntry(formData: FormData) {
   const id = formData.get("id") as string;
 
-  const { error } = await supabaseClient
+  const { error } = await supabaseClient()
     .from("waitlist")
     .delete()
     .eq("id", id);
@@ -15,5 +15,5 @@ export async function deleteWaitlistEntry(formData: FormData) {
     throw new Error(error.message);
   }
 
-  revalidatePath("/staff"); // adjust if needed
+  revalidatePath("/staff");
 }
