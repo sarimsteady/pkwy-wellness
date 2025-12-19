@@ -17,9 +17,9 @@ export function Navbar() {
   ];
 
   return (
-    <header className="w-full z-50 bg-blue-400/10">
+    <header className="w-full z-50 bg-white">
       {/* Backdrop with blur */}
-      <div className="absolute inset-0 bg-white/30 backdrop-blur-lg border-b border-gray-200/50"></div>
+      <div className="absolute inset-0 bg-white/50 backdrop-blur-lg"></div>
 
       <nav className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">

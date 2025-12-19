@@ -2,7 +2,16 @@ import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
 
 import { metadata } from "@/config/metadata";
+import { Viewport } from "next";
+
 export { metadata };
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+};
 
 import { Fonts } from "@/config/fonts";
 

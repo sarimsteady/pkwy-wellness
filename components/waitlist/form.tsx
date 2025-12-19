@@ -21,7 +21,7 @@ export function WaitlistForm() {
                         name="email"
                         placeholder="Enter your email"
                         disabled={isPending || state.success}
-                        className="pr-32 h-12 text-base bg-blue-400/10 "
+                        className="pr-32 h-12 text-base md:text-sm bg-blue-400/10 "
                         required
                     />
                     <Button

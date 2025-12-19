@@ -7,14 +7,6 @@ export async function SundayClasses({ classes }: { classes: Database['public']['
         <main className={`${Fonts.quicksand.className}`}>
             <section>
                 <div className="items-start gap-4 space-y-4">
-                    <div className="flex flex-col justify-center items-center gap-2">
-                        <h1 className="text-3xl md:text-6xl font-light text-gray-900 tracking-widest">
-                            Women&apos;s Pilates Sculpt
-                        </h1>
-                        <h2 className="text-xl md:text-2xl text-gray-600 font-light">
-                            Every Sunday.
-                        </h2>
-                    </div>
                     {classes.map((c) => {
                         const isRecurring = c.classes > 1;
                         return (
@@ -36,7 +28,7 @@ export async function SundayClasses({ classes }: { classes: Database['public']['
                                         </p>
                                         <div className="flex flex-col text-right">
                                             <p className="text-gray-600 font-semi">
-                                                <strong>${c.price_per_class * c.classes}/month</strong>
+                                                <strong>${c.price_per_class * c.classes}{isRecurring ? '/month' : ''}</strong>
                                             </p>
                                             <p className="text-xs text-gray-600">
                                                 {isRecurring ? ` ($${c.price_per_class}/class)` : ''}

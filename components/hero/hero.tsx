@@ -9,7 +9,7 @@ import { InstagramIcon } from '../icons/instagram';
 
 export function HeroSection() {
   return (
-    <main id="home" className="space-y-8 mb-8 p-8">
+    <main id="home" className="space-y-8 p-8 bg-secondary/20 rounded-4xl">
       <GeometryDots />
       <section className='space-y-4'>
         <div className='text-center'>

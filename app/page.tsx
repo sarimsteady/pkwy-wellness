@@ -6,7 +6,7 @@ export default function Page() {
     return (
         <main>
             <HeroSection />
-            <section className="rounded-4xl space-y-1">
+            <section className="rounded-4xl">
                 <WaitlistSection />
                 <ClassesSection />
             </section>
