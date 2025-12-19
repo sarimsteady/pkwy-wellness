@@ -32,7 +32,7 @@ export default function Page() {
             Page Not Found
           </h3>
           <p className="text-lg text-gray-600 max-w-md mx-auto">
-            The page you&apos;re looking for doesn&apos;t exist. Let&apos;s get you back to your wellness journey with {Identity.companyName}.
+            The page you&apos;re looking for doesn&apos;t exist. Let&apos;s get you back to your wellness journey with {About.companyName}.
           </p>
         </div>
 
