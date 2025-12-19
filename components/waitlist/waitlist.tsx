@@ -3,7 +3,7 @@ import { WaitlistForm } from './form';
 
 export function WaitlistSection() {
   return (
-    <section id="waitlist" className="relative overflow-hidden py-20 px-4">
+    <section id="waitlist" className="bg-orange-400/10 rounded-4xl relative overflow-hidden py-20 px-4">
       {/* Gradient Background */}
 
       {/* Content */}

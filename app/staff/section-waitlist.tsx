@@ -10,7 +10,7 @@ export async function WaitlistSection() {
 
     if (error) {
         return (
-            <div className="p-6 border border-destructive/20 bg-destructive/5 rounded-xl flex items-center gap-3 text-destructive">
+            <div className="p-6 m-1 border border-destructive/20 bg-destructive/5 rounded-xl flex items-center gap-3 text-destructive">
                 <AlertCircle className="w-5 h-5" />
                 <p className="font-mono text-sm">{error.message}</p>
             </div>
