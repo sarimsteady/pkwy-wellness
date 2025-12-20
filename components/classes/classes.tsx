@@ -1,34 +1,22 @@
 import { Fonts } from "@/config/fonts";
-import { AlertCircle } from "lucide-react";
 import { SundayClasses } from "./sunday-classes/sunday-classes";
-import { supabaseClient } from "@/utils/supabase-client";
 
 export async function ClassesSection() {
-    const supabase = supabaseClient()
-
-    const { data: classes, error } = await supabase.from('pkwy_offerings')
-        .select('*')
-        .order('created_at', { ascending: true })
-
-    if (error) {
-        return (
-            <div className="p-6 border border-destructive/20 bg-destructive/5 rounded-xl flex items-center gap-3 text-destructive">
-                <AlertCircle className="w-5 h-5" />
-                <p className="font-mono text-sm">{error.message}</p>
-            </div>
-        )
-    }
-
     return (
         <main className="bg-secondary/20 rounded-4xl relative overflow-hidden py-20 px-4">
-            <section id="classes" className="relative max-w-4xl mx-auto text-center space-y-8">
+            <section id="classes" className="relative max-w-7xl mx-auto text-center space-y-8">
+                <div className="inline-flex items-center justify-center px-4 py-2 bg-orange-300/30 rounded-full">
+                    <span className="text-sm font-semibold text-orange-600 tracking-wide">
+                        NOW ENROLLING. CLASSES BEGIN JANUARY 2026.
+                    </span>
+                </div>
                 <h1 className={`text-5xl md:text-6xl font-light text-gray-900 ${Fonts.quicksand.className}`}>
-                    Sunday Sessions
+                    Women&apos;s Pilates Sculpt
                 </h1>
-                <p className="text-xl text-gray-600">
-                    Hosted by Samantha
+                <p className="text-xl font-light text-gray-600">
+                    Strength × Breath × Alignment
                 </p>
-                <SundayClasses classes={classes} />
+                <SundayClasses />
             </section>
         </main>
     )
