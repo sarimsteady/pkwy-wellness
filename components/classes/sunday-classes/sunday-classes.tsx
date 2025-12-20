@@ -13,7 +13,7 @@ export async function SundayClasses({ classes }: { classes: Database['public']['
                         return (
                             <div
                                 key={c.id}
-                                className="flex flex-col md:w-3/6 w-5/6 mx-auto border border-gray-200 bg-slate-100 rounded-lg p-6 "
+                                className="flex flex-col md:w-3/6 w-6/6 mx-auto border border-gray-200 bg-slate-100 rounded-lg p-6"
                             >
                                 <div className="space-y-2">
                                     <h2 className="text-2xl font-semibold">
