@@ -4,13 +4,11 @@ import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { About } from '@/config/about';
 import { Fonts } from '@/config/fonts';
-import { GeometryDots } from '../decoration/geometry-dots';
 import { InstagramIcon } from '../icons/instagram';
 
 export function HeroSection() {
   return (
     <main id="home" className="space-y-8 p-8 bg-secondary/20 rounded-4xl">
-      <GeometryDots />
       <section className='space-y-4'>
         <div className='text-center'>
           <h1 className='text-lg text-gray-400 tracking-widest'>

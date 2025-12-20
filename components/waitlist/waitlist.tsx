@@ -4,8 +4,6 @@ import { WaitlistForm } from './form';
 export function WaitlistSection() {
   return (
     <section id="waitlist" className="bg-orange-400/10 rounded-4xl relative overflow-hidden py-20 px-4">
-      {/* Gradient Background */}
-
       {/* Content */}
       <div className="relative max-w-4xl mx-auto text-center space-y-8">
         {/* Badge */}

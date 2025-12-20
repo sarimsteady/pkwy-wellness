@@ -17,10 +17,7 @@ export function Navbar() {
   ];
 
   return (
-    <header className="w-full z-50 bg-white">
-      {/* Backdrop with blur */}
-      <div className="absolute inset-0 bg-white/50 backdrop-blur-lg"></div>
-
+    <header className="sticky top-0 w-full z-50 bg-white/80 backdrop-blur-lg border-b border-gray-200/50">
       <nav className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo and Brand */}

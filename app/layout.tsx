@@ -33,7 +33,7 @@ export default function RootLayout({
       <body className={`antialiased ${Fonts.sora.className}`} suppressHydrationWarning>
         <main>
           <Navbar />
-          <div className="sticky min-h-screen h-full">
+          <div className="min-h-screen h-full">
             {children}
           </div>
         </main>
