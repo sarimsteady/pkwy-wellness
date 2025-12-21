@@ -11,7 +11,7 @@ export function Navbar() {
 
   const navLinks = [
     { href: '/', label: 'Home' },
-    { href: '/book', label: 'Book Class' },
+    { href: '/#book', label: 'Book Class' },
     { href: '/contact', label: 'Contact', external: true },
     { href: '/staff', label: 'Staff' },
   ];

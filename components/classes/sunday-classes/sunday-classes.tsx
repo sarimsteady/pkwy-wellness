@@ -1,7 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Fonts } from "@/config/fonts";
 import { PKWY_OFFERINGS } from "@/config/offerings";
-import { CalendarCheckIcon, ClockIcon } from "lucide-react";
+import { About } from "@/config/about";
+import { ClockIcon } from "lucide-react";
 
 export async function SundayClasses() {
     return (
@@ -73,17 +74,8 @@ export async function SundayClasses() {
                                                 <ClockIcon className="size-4" />
                                             </div>
                                             <div>
-                                                <p className="font-semibold text-stone-900 leading-none">Sundays</p>
+                                                <p className="font-semibold text-stone-900 leading-none">Every Sunday</p>
                                                 <p className="text-xs text-stone-400 mt-1">at 10:00 AM</p>
-                                            </div>
-                                        </div>
-                                        <div className="flex items-center gap-3 text-sm text-stone-600">
-                                            <div className="size-8 rounded-full bg-stone-50 border border-stone-100 flex items-center justify-center text-orange-500 shrink-0">
-                                                <CalendarCheckIcon className="size-4" />
-                                            </div>
-                                            <div>
-                                                <p className="font-semibold text-stone-900 leading-none">{c.classes} Classes</p>
-                                                <p className="text-xs text-stone-400 mt-1">${price} / class</p>
                                             </div>
                                         </div>
                                     </div>
@@ -104,6 +96,47 @@ export async function SundayClasses() {
                             </div>
                         )
                     })}
+                </div>
+
+                {/* Offerings Footer */}
+                <div className="mt-20 pt-12 border-t border-stone-100 max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 text-left">
+                    <div className="space-y-4">
+                        <h4 className={`text-stone-900 font-bold uppercase tracking-[0.2em] text-[10px] ${Fonts.sora.className}`}>
+                            Membership Details
+                        </h4>
+                        <p className="text-stone-500 text-sm leading-relaxed max-w-md">
+                            All memberships renew automatically every month. You can manage your subscription anytime through your <a href="/dashboard" className="text-orange-600 font-medium hover:underline">account dashboard</a> or by contacting us at <a href={`mailto:${About.email}`} className="text-orange-600 font-medium hover:underline">{About.email}</a>.
+                        </p>
+                    </div>
+
+                    <div className="space-y-4 md:text-right md:flex md:flex-col md:items-end">
+                        <h4 className={`text-stone-900 font-bold uppercase tracking-[0.2em] text-[10px] ${Fonts.sora.className}`}>
+                            Location
+                        </h4>
+                        <div className="space-y-2">
+                            <p className="text-stone-500 text-sm leading-relaxed">
+                                {About.address.complete}
+                            </p>
+                            <div className="flex gap-4 md:justify-end text-xs font-bold uppercase tracking-widest pt-2">
+                                <a
+                                    href={About.address.googleMaps}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-orange-600 hover:text-stone-900 transition-colors duration-300"
+                                >
+                                    Google Maps
+                                </a>
+                                <a
+                                    href={About.address.appleMaps}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-orange-600 hover:text-stone-900 transition-colors duration-300"
+                                >
+                                    Apple Maps
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
         </main>

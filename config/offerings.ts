@@ -9,8 +9,8 @@ export const PKWY_OFFERINGS: {
             title: "Drop-In / Intro Class",
             description: "One-time Women-Only Pilates Sculpt class. No commitment.",
             classes: 1,
-            price_per_class: 20,
-            stripe_payment_link: "https://buy.stripe.com/test_fZu14mdLv0hI1py2QB3AY00"
+            price_per_class: 15,
+            stripe_payment_link: "https://buy.stripe.com/cNi5kC9vfc0qc4c9eZ3AY03"
         },
         {
             title: "Monthly Membership",

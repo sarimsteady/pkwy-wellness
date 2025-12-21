@@ -68,7 +68,7 @@ export function CreateInvoiceClient() {
             <CardHeader>
                 <div className="flex items-center justify-between">
                     <div>
-                        <CardTitle className="text-xl font-semibold tracking-tight">Generate Payment Link</CardTitle>
+                        <CardTitle className="text-xl font-semibold tracking-tight">Create an Invoice</CardTitle>
                         <CardDescription>Create a secure checkout link for your customer</CardDescription>
                     </div>
                     {(amount || customer || paymentFor) && (

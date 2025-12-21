@@ -51,9 +51,19 @@ export function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/dashboard" className="text-sm text-gray-600 hover:text-primary transition-colors duration-200">
+                  Manage Membership
+                </Link>
+              </li>
+              <li>
                 <a href="/waiver" className="text-sm text-gray-600 hover:text-primary transition-colors duration-200">
-                  Waiver
+                  Waiver Form
                 </a>
+              </li>
+              <li>
+                <Link href="/staff" className="text-sm text-gray-600 hover:text-primary transition-colors duration-200">
+                  Staff Access
+                </Link>
               </li>
             </ul>
           </div>

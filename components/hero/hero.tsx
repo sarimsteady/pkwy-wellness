@@ -60,8 +60,7 @@ export function HeroSection() {
           </a>
 
           <a
-            href={About.social.instagram}
-            target="_blank"
+            href="/contact"
             rel="noopener noreferrer"
           >
             <Button variant='secondary' size="lg">
