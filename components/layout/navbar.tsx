@@ -9,10 +9,10 @@ import { LockIcon, MapPinIcon, MenuIcon, XIcon } from 'lucide-react';
 export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const navLinks = [
+  const navLinks: { href: string; label: string; external?: boolean }[] = [
     { href: '/', label: 'Home' },
     { href: '/#book', label: 'Book Class' },
-    { href: '/contact', label: 'Contact', external: true },
+    { href: '/contact', label: 'Contact' },
     { href: '/staff', label: 'Staff' },
   ];
 
