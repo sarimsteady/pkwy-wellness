@@ -11,9 +11,9 @@ export default function Page() {
             <HeroSection />
             <section id="book" className="rounded-4xl">
                 <ClassesSection />
+                <AboutPKWYSection />
                 <ReformPilatesSection />
             </section>
-            <AboutPKWYSection />
         </main>
     )
 }
