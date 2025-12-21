@@ -17,7 +17,7 @@ export const PKWY_OFFERINGS: {
             description: "Includes 4 Women-Only Pilates Sculpt classes each month.",
             classes: 4,
             price_per_class: 20,
-            stripe_payment_link: process.env.NODE_ENV === "production" ? "https://buy.stripe.com/8x26oG7n76G64BK62N3AY0176G64BK62N3AY01" : "https://buy.stripe.com/test_8x25kCgWU0cf7Rl0601Fe02"
+            stripe_payment_link: process.env.NODE_ENV === "production" ? "https://buy.stripe.com/8x26oG7n76G64BK62N3AY01" : "https://buy.stripe.com/test_8x25kCgWU0cf7Rl0601Fe02"
         },
         {
             title: "Friendship Membership",
