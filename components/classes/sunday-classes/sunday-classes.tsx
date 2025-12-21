@@ -99,7 +99,7 @@ export async function SundayClasses() {
                 </div>
 
                 {/* Offerings Footer */}
-                <div className="mt-20 pt-12 border-t border-stone-100 max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 text-left">
+                <div className="mt-10 pt-6 border-t border-stone-100 max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 text-left">
                     <div className="space-y-4">
                         <h4 className={`text-stone-900 font-bold uppercase tracking-[0.2em] text-[10px] ${Fonts.sora.className}`}>
                             Membership Details
