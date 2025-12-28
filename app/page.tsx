@@ -1,5 +1,5 @@
 import { ClassesSection } from "@/components/classes/classes";
-import { ReformPilatesSection } from "@/components/classes/reform-pilates";
+import { KingsleyClasses } from "@/components/classes/kingsley-classes/kingsley-classes";
 import { AboutPKWYSection } from "@/components/about/about-pkwy";
 import { GeometryDots } from "@/components/decoration/geometry-dots";
 import { HeroSection } from "@/components/hero/hero";
@@ -12,7 +12,7 @@ export default function Page() {
             <section id="book" className="rounded-4xl">
                 <ClassesSection />
                 <AboutPKWYSection />
-                <ReformPilatesSection />
+                <KingsleyClasses />
             </section>
         </main>
     )
