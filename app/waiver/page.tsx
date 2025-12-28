@@ -31,7 +31,7 @@ export default function WaiverPage() {
               href="https://docs.google.com/forms/d/e/1FAIpQLSfmaWp0FKWl6YY9PhiBFS8Etni2lu_ebXOuXVeausK_XdMV5g/viewform?usp=header"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-orange-600 hover:text-orange-700 font-medium"
+              className="text-violet-600 hover:text-violet-700 font-medium"
             >
               Open in new tab
             </a>
@@ -66,7 +66,7 @@ export default function WaiverPage() {
                     href="https://docs.google.com/forms/d/e/1FAIpQLSfmaWp0FKWl6YY9PhiBFS8Etni2lu_ebXOuXVeausK_XdMV5g/viewform?usp=header"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-orange-600 hover:text-orange-700 font-medium"
+                    className="text-violet-600 hover:text-violet-700 font-medium"
                   >
                     Open in new tab
                   </a>
@@ -88,23 +88,23 @@ export default function WaiverPage() {
               </h3>
               <ul className="space-y-2 text-gray-600">
                 <li className="flex items-start">
-                  <span className="text-orange-500 mr-2">•</span>
+                  <span className="text-violet-500 mr-2">•</span>
                   <span>Personal information and emergency contacts</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-orange-500 mr-2">•</span>
+                  <span className="text-violet-500 mr-2">•</span>
                   <span>Health and medical history questions</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-orange-500 mr-2">•</span>
+                  <span className="text-violet-500 mr-2">•</span>
                   <span>Liability waiver and risk acknowledgment</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-orange-500 mr-2">•</span>
+                  <span className="text-violet-500 mr-2">•</span>
                   <span>Cancellation policy agreement</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-orange-500 mr-2">•</span>
+                  <span className="text-violet-500 mr-2">•</span>
                   <span>Optional media release consent</span>
                 </li>
               </ul>
@@ -116,23 +116,23 @@ export default function WaiverPage() {
               </h3>
               <ul className="space-y-2 text-gray-600">
                 <li className="flex items-start">
-                  <span className="text-orange-500 mr-2">•</span>
+                  <span className="text-violet-500 mr-2">•</span>
                   <span>All fields marked as required must be completed</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-orange-500 mr-2">•</span>
+                  <span className="text-violet-500 mr-2">•</span>
                   <span>Form takes approximately 5-10 minutes</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-orange-500 mr-2">•</span>
+                  <span className="text-violet-500 mr-2">•</span>
                   <span>Your information is kept confidential</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-orange-500 mr-2">•</span>
+                  <span className="text-violet-500 mr-2">•</span>
                   <span>Required before your first class</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-orange-500 mr-2">•</span>
+                  <span className="text-violet-500 mr-2">•</span>
                   <span>One-time submission per client</span>
                 </li>
               </ul>
@@ -145,7 +145,7 @@ export default function WaiverPage() {
             Questions? Contact us at{" "}
             <a
               href={`mailto:${About.email}`}
-              className="text-orange-600 hover:text-orange-700 font-medium"
+              className="text-violet-600 hover:text-violet-700 font-medium"
             >
               {About.email}
             </a>
@@ -154,7 +154,7 @@ export default function WaiverPage() {
               href={About.social.instagram}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-orange-600 hover:text-orange-700 font-medium"
+              className="text-violet-600 hover:text-violet-700 font-medium"
             >
               Instagram
             </a>

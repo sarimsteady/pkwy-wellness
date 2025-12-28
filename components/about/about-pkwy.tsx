@@ -22,20 +22,20 @@ export function AboutPKWYSection() {
                         </div>
 
                         {/* Floating Accent */}
-                        <div className="absolute -top-6 -right-6 size-24 bg-orange-500/10 rounded-full blur-2xl -z-10 animate-pulse" />
+                        <div className="absolute -top-6 -right-6 size-24 bg-violet-500/10 rounded-full blur-2xl -z-10 animate-pulse" />
                     </div>
 
                     {/* Text Side */}
                     <div className="space-y-10 order-1 lg:order-2">
                         <div className="space-y-6">
                             <div className="inline-flex items-center gap-2 px-4 py-2 bg-stone-100 border border-stone-200 rounded-full">
-                                <Sparkles className="size-3.5 text-orange-500" />
+                                <Sparkles className="size-3.5 text-violet-500" />
                                 <span className="text-[10px] font-bold text-stone-600 uppercase tracking-widest">Our Story</span>
                             </div>
 
                             <h2 className={`text-4xl md:text-5xl lg:text-6xl font-bold text-stone-900 ${Fonts.sora.className} tracking-tight leading-[1.1]`}>
                                 Rooted in <br />
-                                <span className="text-orange-600 italic font-light">Pittsburgh</span>
+                                <span className="text-violet-600 italic font-light">Pittsburgh</span>
                             </h2>
 
                             <p className={`text-xl text-stone-600 font-light leading-relaxed max-w-xl ${Fonts.quicksand.className}`}>
@@ -44,8 +44,8 @@ export function AboutPKWYSection() {
                         </div>
 
                         <div className="grid sm:grid-cols-2 gap-8 pt-4">
-                            <div className="space-y-3 p-6 bg-white rounded-3xl border border-stone-100 shadow-sm group hover:border-orange-100 transition-colors duration-500">
-                                <div className="size-10 rounded-xl bg-orange-50 flex items-center justify-center text-orange-600 group-hover:scale-110 transition-transform duration-500">
+                            <div className="space-y-3 p-6 bg-white rounded-3xl border border-stone-100 shadow-sm group hover:border-violet-100 transition-colors duration-500">
+                                <div className="size-10 rounded-xl bg-violet-50 flex items-center justify-center text-violet-600 group-hover:scale-110 transition-transform duration-500">
                                     <Sparkles className="size-5" />
                                 </div>
                                 <h4 className={`font-bold text-stone-900 ${Fonts.sora.className}`}>Intentional Practice</h4>
@@ -54,8 +54,8 @@ export function AboutPKWYSection() {
                                 </p>
                             </div>
 
-                            <div className="space-y-3 p-6 bg-white rounded-3xl border border-stone-100 shadow-sm group hover:border-orange-100 transition-colors duration-500">
-                                <div className="size-10 rounded-xl bg-orange-50 flex items-center justify-center text-orange-600 group-hover:scale-110 transition-transform duration-500">
+                            <div className="space-y-3 p-6 bg-white rounded-3xl border border-stone-100 shadow-sm group hover:border-violet-100 transition-colors duration-500">
+                                <div className="size-10 rounded-xl bg-violet-50 flex items-center justify-center text-violet-600 group-hover:scale-110 transition-transform duration-500">
                                     <Heart className="size-5" />
                                 </div>
                                 <h4 className={`font-bold text-stone-900 ${Fonts.sora.className}`}>Guided Growth</h4>

@@ -3,12 +3,12 @@ import { WaitlistForm } from './form';
 
 export function WaitlistSection() {
   return (
-    <section id="waitlist" className="bg-orange-400/10 rounded-4xl relative overflow-hidden py-20 px-4">
+    <section id="waitlist" className="bg-violet-400/10 rounded-4xl relative overflow-hidden py-20 px-4">
       {/* Content */}
       <div className="relative max-w-4xl mx-auto text-center space-y-8">
         {/* Badge */}
-        <div className="inline-flex items-center justify-center px-4 py-2 bg-orange-300/30 rounded-full">
-          <span className="text-sm font-semibold text-orange-600 tracking-wide">
+        <div className="inline-flex items-center justify-center px-4 py-2 bg-violet-300/30 rounded-full">
+          <span className="text-sm font-semibold text-violet-600 tracking-wide">
             JAN 2026 — COMING SOON
           </span>
         </div>

@@ -7,8 +7,8 @@ export async function ClassesSection() {
         <main className="bg-secondary/20 rounded-4xl relative overflow-hidden py-20 px-4">
             <GeometryDots />
             <section id="classes" className="relative max-w-7xl mx-auto text-center space-y-8">
-                <div className="inline-flex items-center justify-center px-4 py-2 bg-orange-300/30 rounded-full">
-                    <span className="text-sm font-semibold text-orange-600 tracking-wide">
+                <div className="inline-flex items-center justify-center px-4 py-2 bg-violet-300/30 rounded-full">
+                    <span className="text-sm font-semibold text-violet-600 tracking-wide">
                         NOW ENROLLING
                     </span>
                 </div>
