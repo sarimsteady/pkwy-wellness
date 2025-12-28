@@ -52,7 +52,7 @@ export function KingsleyClasses() {
                                     target="_blank"
                                     rel="noopener noreferrer"
                                 >
-                                    <Button size="lg" className="rounded-2xl px-8 py-7 bg-stone-900 hover:bg-fuchsia-600 text-white shadow-xl shadow-stone-200 transition-all duration-300 group/btn">
+                                    <Button size="lg" className="rounded-2xl px-8 py-7 bg-primary hover:bg-fuchsia-600 text-white shadow-xl shadow-stone-200 transition-all duration-300 group/btn">
                                         <span className={`text-base font-semibold ${Fonts.sora.className}`}>
                                             Book now
                                         </span>
