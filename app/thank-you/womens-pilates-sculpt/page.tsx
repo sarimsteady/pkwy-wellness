@@ -19,9 +19,9 @@ export default async function ThankYouPage({ searchParams }: PageProps) {
                 {/* Success Icon */}
                 <div className="flex justify-center">
                     <div className="relative">
-                        <div className="absolute inset-0 bg-violet-200 rounded-full blur-2xl opacity-50 animate-pulse" />
+                        <div className="absolute inset-0 bg-fuchsia-200 rounded-full blur-2xl opacity-50 animate-pulse" />
                         <div className="relative size-24 bg-white border border-stone-100 rounded-full flex items-center justify-center shadow-xl shadow-stone-100 animate-in zoom-in duration-500">
-                            <CheckCircle2 className="size-12 text-violet-500" />
+                            <CheckCircle2 className="size-12 text-fuchsia-500" />
                         </div>
                     </div>
                 </div>
@@ -32,7 +32,7 @@ export default async function ThankYouPage({ searchParams }: PageProps) {
                         You&apos;re in! We can&apos;t wait to see you.
                     </h1>
                     <p className="text-xl text-stone-500 font-light">
-                        Your booking for <span className="text-stone-900 font-medium text-violet-600">Women’s Pilates Sculpt</span> is confirmed.
+                        Your booking for <span className="text-stone-900 font-medium text-fuchsia-600">Women’s Pilates Sculpt</span> is confirmed.
                     </p>
                 </div>
 
@@ -68,25 +68,25 @@ export default async function ThankYouPage({ searchParams }: PageProps) {
                 {/* What to Expect Section */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
                     <div className="bg-white border border-stone-100 rounded-3xl p-8 shadow-sm hover:shadow-md transition-shadow duration-300">
-                        <div className="size-10 rounded-2xl bg-violet-50 flex items-center justify-center mb-6">
-                            <Calendar className="size-5 text-violet-500" />
+                        <div className="size-10 rounded-2xl bg-fuchsia-50 flex items-center justify-center mb-6">
+                            <Calendar className="size-5 text-fuchsia-500" />
                         </div>
                         <h3 className={`text-lg font-bold text-stone-900 ${Fonts.sora.className} mb-2`}>Class Schedule</h3>
                         <p className="text-stone-500 text-sm leading-relaxed">
                             Classes are every <span className="font-semibold text-stone-700">Sunday at 10:00 AM</span> at {About.address.complete}.
                         </p>
                         <p className="text-stone-500 text-sm leading-relaxed">
-                            Directions: <a href={About.address.googleMaps} className="text-violet-600 font-medium">Google Maps</a>, <a href={About.address.appleMaps} className="text-violet-600 font-medium">Apple Maps</a>
+                            Directions: <a href={About.address.googleMaps} className="text-fuchsia-600 font-medium">Google Maps</a>, <a href={About.address.appleMaps} className="text-fuchsia-600 font-medium">Apple Maps</a>
                         </p>
                     </div>
 
                     <div className="bg-white border border-stone-100 rounded-3xl p-8 shadow-sm hover:shadow-md transition-shadow duration-300">
-                        <div className="size-10 rounded-2xl bg-violet-50 flex items-center justify-center mb-6">
-                            <Mail className="size-5 text-violet-500" />
+                        <div className="size-10 rounded-2xl bg-fuchsia-50 flex items-center justify-center mb-6">
+                            <Mail className="size-5 text-fuchsia-500" />
                         </div>
                         <h3 className={`text-lg font-bold text-stone-900 ${Fonts.sora.className} mb-2`}>Manage your membership</h3>
                         <p className="text-stone-500 text-sm leading-relaxed">
-                            You can manage your membership any time <Link href="/dashboard" className="text-violet-600 font-medium">here</Link> or by contacting us at {About.email}.
+                            You can manage your membership any time <Link href="/dashboard" className="text-fuchsia-600 font-medium">here</Link> or by contacting us at {About.email}.
                         </p>
                     </div>
 
@@ -101,7 +101,7 @@ export default async function ThankYouPage({ searchParams }: PageProps) {
                             </Button>
                         </Link>
                         <Link href={`mailto:${About.email}`}>
-                            <Button size="lg" className="rounded-2xl px-8 bg-stone-900 hover:bg-violet-600 text-white shadow-xl shadow-stone-100 transition-all duration-300 w-full sm:w-auto">
+                            <Button size="lg" className="rounded-2xl px-8 bg-stone-900 hover:bg-fuchsia-600 text-white shadow-xl shadow-stone-100 transition-all duration-300 w-full sm:w-auto">
                                 Contact Support
                             </Button>
                         </Link>

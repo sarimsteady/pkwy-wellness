@@ -13,14 +13,14 @@ export const metadata = {
 
 export default function ContactPage() {
   return (
-    <main className={`min-h-screen bg-white ${Fonts.quicksand.className} selection:bg-violet-100 selection:text-violet-900`}>
+    <main className={`min-h-screen bg-white ${Fonts.quicksand.className} selection:bg-fuchsia-100 selection:text-fuchsia-900`}>
       <GeometryDots />
 
       <section className="relative pt-16 px-6 overflow-hidden">
         {/* Header Section */}
         <div className="max-w-4xl mx-auto flex flex-col items-center text-center space-y-8 mb-20">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-stone-50 border border-stone-100 rounded-full">
-            <MessageCircle className="size-4 text-violet-500" />
+            <MessageCircle className="size-4 text-fuchsia-500" />
             <span className="text-[10px] font-bold text-stone-600 uppercase tracking-widest">Connect with us</span>
           </div>
 
@@ -37,11 +37,11 @@ export default function ContactPage() {
         {/* Contact Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto mb-20">
           {/* Email Card */}
-          <div className="group relative bg-white border border-stone-100 rounded-[3rem] p-10 shadow-[0_32px_64px_-16px_rgba(0,0,0,0.03)] hover:border-violet-200/50 transition-all duration-700">
-            <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-violet-50/20 to-transparent -z-10" />
+          <div className="group relative bg-white border border-stone-100 rounded-[3rem] p-10 shadow-[0_32px_64px_-16px_rgba(0,0,0,0.03)] hover:border-fuchsia-200/50 transition-all duration-700">
+            <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-fuchsia-50/20 to-transparent -z-10" />
 
             <div className="space-y-8 flex flex-col h-full">
-              <div className="size-16 rounded-3xl bg-stone-50 border border-stone-100 flex items-center justify-center text-stone-400 group-hover:text-violet-500 group-hover:bg-violet-50 transition-all duration-500">
+              <div className="size-16 rounded-3xl bg-stone-50 border border-stone-100 flex items-center justify-center text-stone-400 group-hover:text-fuchsia-500 group-hover:bg-fuchsia-50 transition-all duration-500">
                 <MailIcon className="size-7" />
               </div>
 
@@ -54,7 +54,7 @@ export default function ContactPage() {
 
               <div className="mt-auto pt-6">
                 <a href={`mailto:${About.email}`} className="block">
-                  <Button size="lg" className="w-full rounded-2xl py-7 bg-stone-900 hover:bg-violet-600 text-white shadow-xl shadow-stone-100 transition-all duration-300 group/btn">
+                  <Button size="lg" className="w-full rounded-2xl py-7 bg-stone-900 hover:bg-fuchsia-600 text-white shadow-xl shadow-stone-100 transition-all duration-300 group/btn">
                     <span className={`text-base font-semibold ${Fonts.sora.className}`}>
                       {About.email}
                     </span>
@@ -66,11 +66,11 @@ export default function ContactPage() {
           </div>
 
           {/* Instagram Card */}
-          <div className="group relative bg-white border border-stone-100 rounded-[3rem] p-10 shadow-[0_32px_64px_-16px_rgba(0,0,0,0.03)] hover:border-violet-200/50 transition-all duration-700">
-            <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-violet-50/20 to-transparent -z-10" />
+          <div className="group relative bg-white border border-stone-100 rounded-[3rem] p-10 shadow-[0_32px_64px_-16px_rgba(0,0,0,0.03)] hover:border-fuchsia-200/50 transition-all duration-700">
+            <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-fuchsia-50/20 to-transparent -z-10" />
 
             <div className="space-y-8 flex flex-col h-full">
-              <div className="size-16 rounded-3xl bg-stone-50 border border-stone-100 flex items-center justify-center text-stone-400 group-hover:text-violet-500 group-hover:bg-violet-50 transition-all duration-500">
+              <div className="size-16 rounded-3xl bg-stone-50 border border-stone-100 flex items-center justify-center text-stone-400 group-hover:text-fuchsia-500 group-hover:bg-fuchsia-50 transition-all duration-500">
                 <InstagramIcon />
               </div>
 
@@ -101,14 +101,14 @@ export default function ContactPage() {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div className="space-y-8">
                 <div className="inline-flex items-center gap-2 px-4 py-2 bg-white border border-stone-100 rounded-full">
-                  <MapPin className="size-3.5 text-violet-500" />
+                  <MapPin className="size-3.5 text-fuchsia-500" />
                   <span className="text-[10px] font-bold text-stone-600 uppercase tracking-widest">Our Studio</span>
                 </div>
 
                 <div className="space-y-4">
                   <h2 className={`text-3xl md:text-4xl font-bold text-stone-900 ${Fonts.sora.className} tracking-tight`}>
                     In the heart of <br />
-                    <span className="text-violet-600 italic font-light">Pittsburgh</span>
+                    <span className="text-fuchsia-600 italic font-light">Pittsburgh</span>
                   </h2>
                   <p className="text-lg text-stone-500 font-light leading-relaxed">
                     {About.address.complete}
@@ -120,7 +120,7 @@ export default function ContactPage() {
                     href={About.address.googleMaps}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-stone-400 hover:text-violet-600 transition-colors duration-300"
+                    className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-stone-400 hover:text-fuchsia-600 transition-colors duration-300"
                   >
                     Google Maps <ExternalLink className="size-3" />
                   </a>
@@ -128,7 +128,7 @@ export default function ContactPage() {
                     href={About.address.appleMaps}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-stone-400 hover:text-violet-600 transition-colors duration-300"
+                    className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-stone-400 hover:text-fuchsia-600 transition-colors duration-300"
                   >
                     Apple Maps <ExternalLink className="size-3" />
                   </a>

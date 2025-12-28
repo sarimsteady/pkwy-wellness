@@ -17,10 +17,10 @@ export async function SundayClasses() {
                         return (
                             <div
                                 key={c.title}
-                                className="group relative flex flex-col bg-white border border-stone-200 rounded-3xl p-8 transition-all duration-500 hover:border-violet-500/30 hover:shadow-[0_20px_50_rgba(0,0,0,0.04)] h-full"
+                                className="group relative flex flex-col bg-white border border-stone-200 rounded-3xl p-8 transition-all duration-500 hover:border-fuchsia-500/30 hover:shadow-[0_20px_50_rgba(0,0,0,0.04)] h-full"
                             >
                                 {/* Top Accent Line */}
-                                <div className="absolute top-0 left-8 right-8 h-1 bg-violet-500/10 rounded-full scale-x-0 group-hover:scale-x-100 transition-transform duration-500" />
+                                <div className="absolute top-0 left-8 right-8 h-1 bg-fuchsia-500/10 rounded-full scale-x-0 group-hover:scale-x-100 transition-transform duration-500" />
 
                                 <div className="flex-1 flex flex-col text-left">
                                     <div className="mb-6">
@@ -54,7 +54,7 @@ export async function SundayClasses() {
                                                 </span>
                                             )}
                                             {c.title === "Friendship Membership" && (
-                                                <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-violet-50 text-violet-700 uppercase tracking-wider border border-violet-100">
+                                                <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-fuchsia-50 text-fuchsia-700 uppercase tracking-wider border border-fuchsia-100">
                                                     Best Value
                                                 </span>
                                             )}
@@ -70,7 +70,7 @@ export async function SundayClasses() {
 
                                     <div className="space-y-4 mb-6">
                                         <div className="flex items-center gap-3 text-sm text-stone-600">
-                                            <div className="size-8 rounded-full bg-stone-50 border border-stone-100 flex items-center justify-center text-violet-500 shrink-0">
+                                            <div className="size-8 rounded-full bg-stone-50 border border-stone-100 flex items-center justify-center text-fuchsia-500 shrink-0">
                                                 <ClockIcon className="size-4" />
                                             </div>
                                             <div>
@@ -105,7 +105,7 @@ export async function SundayClasses() {
                             Membership Details
                         </h4>
                         <p className="text-stone-500 text-sm leading-relaxed max-w-md">
-                            All memberships renew automatically every month. You can manage your subscription anytime through your <a href="/dashboard" className="text-violet-600 font-medium hover:underline">account dashboard</a> or by contacting us at <a href={`mailto:${About.email}`} className="text-violet-600 font-medium hover:underline">{About.email}</a>.
+                            All memberships renew automatically every month. You can manage your subscription anytime through your <a href="/dashboard" className="text-fuchsia-600 font-medium hover:underline">account dashboard</a> or by contacting us at <a href={`mailto:${About.email}`} className="text-fuchsia-600 font-medium hover:underline">{About.email}</a>.
                         </p>
                     </div>
 
@@ -122,7 +122,7 @@ export async function SundayClasses() {
                                     href={About.address.googleMaps}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="text-violet-600 hover:text-stone-900 transition-colors duration-300"
+                                    className="text-fuchsia-600 hover:text-stone-900 transition-colors duration-300"
                                 >
                                     Google Maps
                                 </a>
@@ -130,7 +130,7 @@ export async function SundayClasses() {
                                     href={About.address.appleMaps}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="text-violet-600 hover:text-stone-900 transition-colors duration-300"
+                                    className="text-fuchsia-600 hover:text-stone-900 transition-colors duration-300"
                                 >
                                     Apple Maps
                                 </a>

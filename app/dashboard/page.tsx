@@ -51,7 +51,7 @@ export default function DashboardPage() {
 
                 {/* Form Container */}
                 <div className="bg-white border border-stone-100 rounded-[2.5rem] p-4 sm:p-10 shadow-[0_32px_64px_-16px_rgba(0,0,0,0.02)] relative overflow-hidden group">
-                    <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-violet-200/50 via-violet-500/50 to-violet-200/50 scale-x-0 group-hover:scale-x-100 transition-transform duration-700 origin-left" />
+                    <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-fuchsia-200/50 via-fuchsia-500/50 to-fuchsia-200/50 scale-x-0 group-hover:scale-x-100 transition-transform duration-700 origin-left" />
 
                     <form onSubmit={handleSubmit} className="space-y-6">
                         <div className="space-y-2">
@@ -59,7 +59,7 @@ export default function DashboardPage() {
                                 Registered Email
                             </label>
                             <div className="relative">
-                                <Mail className="absolute left-5 top-1/2 -translate-y-1/2 size-5 text-stone-300 group-focus-within:text-violet-500 transition-colors" />
+                                <Mail className="absolute left-5 top-1/2 -translate-y-1/2 size-5 text-stone-300 group-focus-within:text-fuchsia-500 transition-colors" />
                                 <input
                                     id="email"
                                     type="email"
@@ -67,7 +67,7 @@ export default function DashboardPage() {
                                     onChange={(e) => setEmail(e.target.value)}
                                     placeholder="your@email.com"
                                     required
-                                    className="w-full bg-stone-50 border-none rounded-2xl py-5 pl-14 pr-6 text-stone-900 placeholder:text-stone-300 focus:ring-2 focus:ring-violet-500/20 transition-all outline-none text-base"
+                                    className="w-full bg-stone-50 border-none rounded-2xl py-5 pl-14 pr-6 text-stone-900 placeholder:text-stone-300 focus:ring-2 focus:ring-fuchsia-500/20 transition-all outline-none text-base"
                                 />
                             </div>
                         </div>
@@ -83,7 +83,7 @@ export default function DashboardPage() {
                         <Button
                             type="submit"
                             disabled={loading || !email}
-                            className="w-full rounded-2xl py-8 bg-stone-900 hover:bg-violet-600 text-white shadow-xl shadow-stone-100 transition-all duration-300 disabled:opacity-50 disabled:hover:bg-stone-900 group/btn"
+                            className="w-full rounded-2xl py-8 bg-stone-900 hover:bg-fuchsia-600 text-white shadow-xl shadow-stone-100 transition-all duration-300 disabled:opacity-50 disabled:hover:bg-stone-900 group/btn"
                         >
                             <span className={`text-base font-semibold ${Fonts.sora.className} flex items-center gap-2`}>
                                 {loading ? (
@@ -104,7 +104,7 @@ export default function DashboardPage() {
 
                 {/* Footer Info */}
                 <div className="mt-12 text-center text-sm text-stone-400 space-y-4 font-light">
-                    <p>Having trouble? Contact us at <a href="mailto:hello@pkwywellness.com" className="text-stone-600 font-medium hover:text-violet-600 transition-colors">hello@pkwywellness.com</a></p>
+                    <p>Having trouble? Contact us at <a href="mailto:hello@pkwywellness.com" className="text-stone-600 font-medium hover:text-fuchsia-600 transition-colors">hello@pkwywellness.com</a></p>
                     <div className="pt-4 flex justify-center">
                         <Link href="/" className="inline-flex items-center gap-2 px-6 py-3 rounded-full hover:bg-stone-50 transition-all group">
                             <span className="text-xs font-bold uppercase tracking-widest text-stone-400 group-hover:text-stone-900">Back to Home</span>

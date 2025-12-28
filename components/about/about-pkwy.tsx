@@ -22,7 +22,7 @@ export function AboutPKWYSection() {
                         </div>
 
                         {/* Floating Accent */}
-                        <div className="absolute -top-6 -right-6 size-24 bg-violet-500/10 rounded-full blur-2xl -z-10 animate-pulse" />
+                        <div className="absolute -top-6 -right-6 size-24 bg-fuchsia-500/10 rounded-full blur-2xl -z-10 animate-pulse" />
                     </div>
 
                     {/* Text Side */}
@@ -44,8 +44,8 @@ export function AboutPKWYSection() {
                         </div>
 
                         <div className="grid sm:grid-cols-2 gap-8 pt-4">
-                            <div className="space-y-3 p-6 bg-white rounded-3xl border border-stone-100 shadow-sm group hover:border-violet-100 transition-colors duration-500">
-                                <div className="size-10 rounded-xl bg-violet-50 flex items-center justify-center text-violet-600 group-hover:scale-110 transition-transform duration-500">
+                            <div className="space-y-3 p-6 bg-white rounded-3xl border border-stone-100 shadow-sm group hover:border-fuchsia-100 transition-colors duration-500">
+                                <div className="size-10 rounded-xl bg-fuchsia-50 flex items-center justify-center text-fuchsia-600 group-hover:scale-110 transition-transform duration-500">
                                     <Sparkles className="size-5" />
                                 </div>
                                 <h4 className={`font-bold text-stone-900 ${Fonts.sora.className}`}>Intentional Practice</h4>
@@ -54,8 +54,8 @@ export function AboutPKWYSection() {
                                 </p>
                             </div>
 
-                            <div className="space-y-3 p-6 bg-white rounded-3xl border border-stone-100 shadow-sm group hover:border-violet-100 transition-colors duration-500">
-                                <div className="size-10 rounded-xl bg-violet-50 flex items-center justify-center text-violet-600 group-hover:scale-110 transition-transform duration-500">
+                            <div className="space-y-3 p-6 bg-white rounded-3xl border border-stone-100 shadow-sm group hover:border-fuchsia-100 transition-colors duration-500">
+                                <div className="size-10 rounded-xl bg-fuchsia-50 flex items-center justify-center text-fuchsia-600 group-hover:scale-110 transition-transform duration-500">
                                     <Heart className="size-5" />
                                 </div>
                                 <h4 className={`font-bold text-stone-900 ${Fonts.sora.className}`}>Guided Growth</h4>
