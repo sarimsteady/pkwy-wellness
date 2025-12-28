@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Fonts } from "@/config/fonts";
-import { getCustomerPortalUrl } from "@/actions/stripe";
+import { getCustomerPortalUrl } from "@/utils/stripe-get-customer-portal-url";
 import { Mail, ArrowRight, Loader2 } from "lucide-react";
 import Link from "next/link";
 
