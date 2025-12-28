@@ -48,27 +48,6 @@ export function HeroSection() {
           </div>
         </div>
       </section>
-
-      <section className={`space-y-4 ${Fonts.quicksand.className}`}>
-        <div className='flex gap-2 justify-center items-center'>
-          <a href="#book"
-            rel="noopener noreferrer"
-          >
-            <Button className='font-bold' size="lg">
-              Book a Class
-            </Button>
-          </a>
-
-          <a
-            href="/contact"
-            rel="noopener noreferrer"
-          >
-            <Button variant='secondary' size="lg">
-              Contact
-            </Button>
-          </a>
-        </div>
-      </section>
     </main>
   );
 }

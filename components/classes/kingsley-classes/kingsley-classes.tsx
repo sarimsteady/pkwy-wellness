@@ -16,7 +16,7 @@ export function KingsleyClasses() {
                             <div className="space-y-4">
                                 <h2 className={`text-4xl md:text-5xl font-bold text-stone-900 ${Fonts.sora.className} tracking-tight leading-tight`}>
                                     Reform Pilates <br />
-                                    <span className="text-stone-400">at Kingsley Center</span>
+                                    <span className="text-primary">at Kingsley Center</span>
                                 </h2>
                                 <p className={`text-lg text-stone-500 font-light leading-relaxed max-w-md ${Fonts.quicksand.className}`}>
                                     Join Samantha for a specialized Reform Pilates session held every Friday and Saturday morning at Kingsley Center in Pittsburgh.

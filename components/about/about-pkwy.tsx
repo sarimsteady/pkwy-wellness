@@ -29,13 +29,13 @@ export function AboutPKWYSection() {
                     <div className="space-y-10 order-1 lg:order-2">
                         <div className="space-y-6">
                             <div className="inline-flex items-center gap-2 px-4 py-2 bg-stone-100 border border-stone-200 rounded-full">
-                                <Sparkles className="size-3.5 text-violet-500" />
+                                <Sparkles className="size-3.5 text-blue-500" />
                                 <span className="text-[10px] font-bold text-stone-600 uppercase tracking-widest">Our Story</span>
                             </div>
 
                             <h2 className={`text-4xl md:text-5xl lg:text-6xl font-bold text-stone-900 ${Fonts.sora.className} tracking-tight leading-[1.1]`}>
                                 Rooted in <br />
-                                <span className="text-violet-600 italic font-light">Pittsburgh</span>
+                                <span className="text-primary italic font-light">Pittsburgh</span>
                             </h2>
 
                             <p className={`text-xl text-stone-600 font-light leading-relaxed max-w-xl ${Fonts.quicksand.className}`}>

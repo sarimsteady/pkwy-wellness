@@ -49,7 +49,7 @@ export async function SundayClasses() {
                                                 </span>
                                             )}
                                             {c.title === "Monthly Membership" && (
-                                                <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-blue-50 text-blue-700 uppercase tracking-wider border border-blue-100">
+                                                <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-blue-50 text-primary uppercase tracking-wider border border-blue-100">
                                                     Popular
                                                 </span>
                                             )}
