@@ -1,11 +1,12 @@
-import { CircleDollarSignIcon, NewspaperIcon } from "lucide-react";
+import { CircleDollarSignIcon, NewspaperIcon, MailIcon } from "lucide-react";
 import { LoginForm } from "./mini-components/login-form";
 import { LogoutButton } from "./mini-components/logout-button";
 import { InvoiceSection } from "./section-create-invoice";
 import { WaitlistSection } from "./section-waitlist";
+import { SendEmailSection } from "./section-send-email";
 import { isAuthenticated } from "./server-functions/auth-session";
+import { StaffTabsWrapper } from "./client-components/staff-tabs-wrapper";
 import {
-    Tabs,
     TabsContent,
     TabsList,
     TabsTrigger,
@@ -21,8 +22,10 @@ export const metadata: Metadata = {
     },
 };
 
-export default async function Page() {
+export default async function Page(props: { searchParams: Promise<{ tab?: string }> }) {
     const authenticated = await isAuthenticated();
+    const searchParams = await props.searchParams;
+    const tab = searchParams.tab;
 
     if (!authenticated) {
         return <LoginForm />;
@@ -42,7 +45,7 @@ export default async function Page() {
             </section>
 
             <section>
-                <Tabs defaultValue="waitlist" className="space-y-2">
+                <StaffTabsWrapper defaultTab={tab || "waitlist"}>
                     <TabsList>
                         <TabsTrigger value="waitlist">
                             <NewspaperIcon />
@@ -52,6 +55,10 @@ export default async function Page() {
                             <CircleDollarSignIcon />
                             Create Invoice
                         </TabsTrigger>
+                        <TabsTrigger value="send-email">
+                            <MailIcon />
+                            Send Email
+                        </TabsTrigger>
                     </TabsList>
                     <TabsContent value="waitlist">
                         <WaitlistSection />
@@ -59,7 +66,10 @@ export default async function Page() {
                     <TabsContent value="create-invoice">
                         <InvoiceSection />
                     </TabsContent>
-                </Tabs>
+                    <TabsContent value="send-email">
+                        <SendEmailSection />
+                    </TabsContent>
+                </StaffTabsWrapper>
             </section>
         </main>
     )

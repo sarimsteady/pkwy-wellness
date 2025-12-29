@@ -10,9 +10,13 @@
     "update-types": "npx supabase gen types typescript --project-id qbhxhopthwocdudxeqgv --schema public > types/database.ts"
   },
   "dependencies": {
+    "@aws-sdk/client-ses": "^3.958.0",
     "@base-ui/react": "^1.0.0",
     "@stripe/stripe-js": "^8.6.0",
     "@supabase/supabase-js": "^2.89.0",
+    "@tiptap/extension-link": "^3.14.0",
+    "@tiptap/react": "^3.14.0",
+    "@tiptap/starter-kit": "^3.14.0",
     "@vercel/analytics": "^1.6.1",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",

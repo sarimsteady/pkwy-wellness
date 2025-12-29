@@ -14,197 +14,41 @@ export type Database = {
   }
   public: {
     Tables: {
-      add_ons: {
+      sent_emails: {
         Row: {
-          classes: string[]
-          created_at: string | null
-          description: string
-          id: string
-          price: number
-          title: string
-          updated_at: string | null
-        }
-        Insert: {
-          classes: string[]
-          created_at?: string | null
-          description: string
-          id: string
-          price?: number
-          title: string
-          updated_at?: string | null
-        }
-        Update: {
-          classes?: string[]
-          created_at?: string | null
-          description?: string
-          id?: string
-          price?: number
-          title?: string
-          updated_at?: string | null
-        }
-        Relationships: []
-      }
-      classes: {
-        Row: {
-          classes: number
-          created_at: string | null
-          description: string
-          group_discount_per_class: number | null
-          id: string
-          price_per_class: number
-          title: string
-          updated_at: string | null
-        }
-        Insert: {
-          classes: number
-          created_at?: string | null
-          description: string
-          group_discount_per_class?: number | null
-          id: string
-          price_per_class: number
-          title: string
-          updated_at?: string | null
-        }
-        Update: {
-          classes?: number
-          created_at?: string | null
-          description?: string
-          group_discount_per_class?: number | null
-          id?: string
-          price_per_class?: number
-          title?: string
-          updated_at?: string | null
-        }
-        Relationships: []
-      }
-      instructors: {
-        Row: {
-          biography: string | null
-          created_at: string | null
-          id: string
-          name: string
-          updated_at: string | null
-        }
-        Insert: {
-          biography?: string | null
-          created_at?: string | null
-          id: string
-          name: string
-          updated_at?: string | null
-        }
-        Update: {
-          biography?: string | null
-          created_at?: string | null
-          id?: string
-          name?: string
-          updated_at?: string | null
-        }
-        Relationships: []
-      }
-      locations: {
-        Row: {
-          address: string
-          apple_maps: string | null
-          created_at: string | null
-          google_maps: string | null
-          id: string
-          notes: string | null
-          updated_at: string | null
-        }
-        Insert: {
-          address: string
-          apple_maps?: string | null
-          created_at?: string | null
-          google_maps?: string | null
-          id: string
-          notes?: string | null
-          updated_at?: string | null
-        }
-        Update: {
-          address?: string
-          apple_maps?: string | null
-          created_at?: string | null
-          google_maps?: string | null
-          id?: string
-          notes?: string | null
-          updated_at?: string | null
-        }
-        Relationships: []
-      }
-      pkwy_offerings: {
-        Row: {
-          classes: number
+          body: string
           created_at: string
-          description: string
+          error_message: string | null
           id: string
-          name: string
-          price_per_class: number
+          metadata: Json | null
+          recipients: string[]
+          sender: string
+          status: string
+          subject: string
         }
         Insert: {
-          classes: number
+          body: string
           created_at?: string
-          description: string
+          error_message?: string | null
           id?: string
-          name: string
-          price_per_class: number
+          metadata?: Json | null
+          recipients: string[]
+          sender: string
+          status?: string
+          subject: string
         }
         Update: {
-          classes?: number
+          body?: string
           created_at?: string
-          description?: string
+          error_message?: string | null
           id?: string
-          name?: string
-          price_per_class?: number
+          metadata?: Json | null
+          recipients?: string[]
+          sender?: string
+          status?: string
+          subject?: string
         }
         Relationships: []
-      }
-      schedule_entries: {
-        Row: {
-          booking: string
-          created_at: string | null
-          duration: string
-          id: string
-          instructor: string
-          location: string
-          times: string[]
-          updated_at: string | null
-        }
-        Insert: {
-          booking: string
-          created_at?: string | null
-          duration: string
-          id: string
-          instructor: string
-          location: string
-          times: string[]
-          updated_at?: string | null
-        }
-        Update: {
-          booking?: string
-          created_at?: string | null
-          duration?: string
-          id?: string
-          instructor?: string
-          location?: string
-          times?: string[]
-          updated_at?: string | null
-        }
-        Relationships: [
-          {
-            foreignKeyName: "schedule_entries_instructor_fkey"
-            columns: ["instructor"]
-            isOneToOne: false
-            referencedRelation: "instructors"
-            referencedColumns: ["id"]
-          },
-          {
-            foreignKeyName: "schedule_entries_location_fkey"
-            columns: ["location"]
-            isOneToOne: false
-            referencedRelation: "locations"
-            referencedColumns: ["id"]
-          },
-        ]
       }
       waitlist: {
         Row: {
