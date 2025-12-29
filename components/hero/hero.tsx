@@ -38,7 +38,7 @@ export function HeroSection() {
               >
                 <Button
                   variant="outline"
-                  className="flex items-center gap-2 px-3 py-1.5 rounded-full border-1 border-fuchsia-50/50 bg-fuchsia-100/95 hover:border-primary text-sm"
+                  className="flex items-center gap-2 px-3 py-1.5 rounded-full"
                 >
                   <InstagramIcon />
                   <span className="font-medium">pkwypilates</span>

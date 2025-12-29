@@ -15,9 +15,24 @@ export async function ClassesSection() {
                 <h1 className={`text-5xl md:text-6xl font-light text-gray-900 ${Fonts.quicksand.className}`}>
                     Women&apos;s Pilates Sculpt
                 </h1>
-                <p className="text-xl font-light text-gray-600">
-                    Strength × Breath × Alignment
-                </p>
+                <div>
+                    <p className="text-xl font-light text-gray-600">
+                        Strength × Breath × Alignment.
+                    </p>
+                    <p className="text-xl font-light text-muted-foreground">
+                        Every Sunday. 10 AM.
+                    </p>
+                </div>
+                <div className="bg-muted/50 p-4 m-8 md:max-w-lg mx-auto rounded-2xl text-sm font-light text-gray-600">
+                    <div className="space-y-4">
+                        <p>
+                            <strong className="text-black">&quot;Pilates Sculpt&quot;</strong> blends Pilates-inspired movement, strength-focused sequences, and intentional breath in a space that honors the body as a gift and movement as a form of care.
+                        </p>
+                        <p>
+                            Classes are upbeat, music-driven, and designed to build endurance, alignment, and confidence in a welcoming women-only environment.
+                        </p>
+                    </div>
+                </div>
                 <SundayClasses />
             </section>
         </main>

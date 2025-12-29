@@ -43,9 +43,9 @@ export async function SundayClasses() {
 
                                         {/* Row 2: Badge Area */}
                                         <div className="flex items-center mb-4 min-h-[24px]">
-                                            {c.title === "Drop-In / Intro Class" && (
+                                            {c.title === "Intro Class" && (
                                                 <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-stone-100 text-stone-600 uppercase tracking-wider border border-stone-200">
-                                                    Flex Pass
+                                                    TRY IT OUT
                                                 </span>
                                             )}
                                             {c.title === "Monthly Membership" && (
@@ -99,13 +99,33 @@ export async function SundayClasses() {
                 </div>
 
                 {/* Offerings Footer */}
-                <div className="mt-10 pt-6 border-t border-stone-100 max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 text-left">
+                <div className="mt-10 pt-6 border-t border-stone-100 max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12 text-left">
+
+                    <div className="space-y-4">
+                        <h4 className={`text-stone-900 font-bold uppercase tracking-[0.2em] text-[10px] ${Fonts.sora.className}`}>
+                            Know Before You Come
+                        </h4>
+                        <div className="space-y-2">
+                            {[
+                                "The studio is located on an upper floor and requires walking up two flights of stairs.",
+                                "Please wear comfortable clothing and bring a mat.",
+                                "Arrive a few minutes early to get settled."
+                            ].map((item, i) => (
+                                <div key={i} className="flex gap-3 text-stone-500 text-sm leading-relaxed">
+                                    <span className="text-stone-300 flex-shrink-0">•</span>
+                                    <span>{item}</span>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+
+
                     <div className="space-y-4">
                         <h4 className={`text-stone-900 font-bold uppercase tracking-[0.2em] text-[10px] ${Fonts.sora.className}`}>
                             Membership Details
                         </h4>
                         <p className="text-stone-500 text-sm leading-relaxed max-w-md">
-                            All memberships renew automatically every month. You can manage your subscription anytime through your <a href="/dashboard" className="text-fuchsia-600 font-medium hover:underline">account dashboard</a> or by contacting us at <a href={`mailto:${About.email}`} className="text-fuchsia-600 font-medium hover:underline">{About.email}</a>.
+                            All memberships renew automatically every month. You can manage your subscription anytime through your <a href="/dashboard" className="text-primary font-medium hover:underline">account dashboard</a> or by contacting us at <a href={`mailto:${About.email}`} className="text-primary font-medium hover:underline">{About.email}</a>.
                         </p>
                     </div>
 
@@ -122,7 +142,7 @@ export async function SundayClasses() {
                                     href={About.address.googleMaps}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="text-fuchsia-600 hover:text-stone-900 transition-colors duration-300"
+                                    className="text-primary hover:text-stone-900 transition-colors duration-300"
                                 >
                                     Google Maps
                                 </a>
@@ -130,7 +150,7 @@ export async function SundayClasses() {
                                     href={About.address.appleMaps}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="text-fuchsia-600 hover:text-stone-900 transition-colors duration-300"
+                                    className="text-primary hover:text-stone-900 transition-colors duration-300"
                                 >
                                     Apple Maps
                                 </a>
