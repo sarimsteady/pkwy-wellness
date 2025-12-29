@@ -27,7 +27,6 @@ export function ClientSendEmail() {
     const [loading, setLoading] = useState(false);
     const [status, setStatus] = useState<{ type: 'success' | 'error'; message: string } | null>(null);
     const [recentEmails, setRecentEmails] = useState<SentEmail[]>([]);
-    const [expandedEmailId, setExpandedEmailId] = useState<string | null>(null);
 
     const fetchHistory = async () => {
         const history = await getSentEmails();
@@ -182,11 +181,8 @@ export function ClientSendEmail() {
                             <p className="text-sm text-muted-foreground">No sent emails found.</p>
                         ) : (
                             recentEmails.map((email) => (
-                                <div key={email.id} className="border-b last:border-0">
-                                    <div
-                                        className="flex justify-between items-start py-4 cursor-pointer hover:bg-muted/50 px-2 rounded-md transition-colors"
-                                        onClick={() => setExpandedEmailId(expandedEmailId === email.id ? null : email.id)}
-                                    >
+                                <div key={email.id} className="border-b last:border-0 pb-6 mb-6 last:pb-0 last:mb-0">
+                                    <div className="flex justify-between items-start mb-3 px-2">
                                         <div>
                                             <p className="font-medium">{email.subject}</p>
                                             <p className="text-xs text-muted-foreground mt-1">
@@ -210,15 +206,13 @@ export function ClientSendEmail() {
                                             </p>
                                         </div>
                                     </div>
-                                    {expandedEmailId === email.id && (
-                                        <div className="px-2 pb-4 pt-0 animate-in slide-in-from-top-1 duration-200">
-                                            <div className="text-xs font-semibold text-muted-foreground mb-1">Message Content:</div>
-                                            <div
-                                                className="prose prose-sm max-w-none bg-muted/30 p-3 rounded-md border text-sm"
-                                                dangerouslySetInnerHTML={{ __html: email.body }}
-                                            />
-                                        </div>
-                                    )}
+                                    <div className="px-2">
+                                        <div className="text-xs font-semibold text-muted-foreground mb-1">Message Content:</div>
+                                        <div
+                                            className="prose prose-sm max-w-none bg-muted/30 p-3 rounded-md border text-sm"
+                                            dangerouslySetInnerHTML={{ __html: email.body }}
+                                        />
+                                    </div>
                                 </div>
                             ))
                         )}
