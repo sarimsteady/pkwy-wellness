@@ -132,7 +132,7 @@ export default async function SacredMovementThankYouPage({ searchParams }: PageP
                         </div>
                         <h3 className={`text-lg font-bold text-stone-900 ${Fonts.sora.className} mb-2`}>Class Schedule</h3>
                         <p className="text-stone-500 text-sm leading-relaxed">
-                            Classes are every <span className="font-semibold text-stone-700">Sunday at 11:00 AM</span> at {About.address.complete}.
+                            This class is every <span className="font-semibold text-stone-700">Sunday at 11:00 AM</span> at {About.address.complete}.
                         </p>
                     </div>
 
