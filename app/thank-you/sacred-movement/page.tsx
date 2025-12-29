@@ -2,14 +2,14 @@ import { Button } from "@/components/ui/button";
 import { About } from "@/config/about";
 import { Fonts } from "@/config/fonts";
 import { verifyStripeSession } from "@/utils/stripe-verify-session";
-import { CheckCircle2, Mail, Calendar, ArrowLeft, FileText } from "lucide-react";
+import { CheckCircle2, Mail, Calendar, ArrowLeft, Heart } from "lucide-react";
 import Link from "next/link";
 
 interface PageProps {
     searchParams: Promise<{ session_id?: string }>;
 }
 
-export default async function ThankYouPage({ searchParams }: PageProps) {
+export default async function SacredMovementThankYouPage({ searchParams }: PageProps) {
     const { session_id } = await searchParams;
     const session = session_id ? await verifyStripeSession(session_id) : null;
 
@@ -21,7 +21,7 @@ export default async function ThankYouPage({ searchParams }: PageProps) {
                     <div className="relative">
                         <div className="absolute inset-0 bg-fuchsia-200 rounded-full blur-2xl opacity-50 animate-pulse" />
                         <div className="relative size-24 bg-white border border-stone-100 rounded-full flex items-center justify-center shadow-xl shadow-stone-100 animate-in zoom-in duration-500">
-                            <CheckCircle2 className="size-12 text-fuchsia-500" />
+                            <Heart className="size-12 text-fuchsia-500" />
                         </div>
                     </div>
                 </div>
@@ -29,12 +29,44 @@ export default async function ThankYouPage({ searchParams }: PageProps) {
                 {/* Hero Text */}
                 <div className="space-y-4">
                     <h1 className={`text-4xl md:text-5xl font-bold text-stone-900 ${Fonts.sora.className} tracking-tight`}>
-                        You&apos;re in! We can&apos;t wait to see you.
+                        You&apos;re in! A sacred morning awaits.
                     </h1>
-                    <p className="text-xl text-stone-500 font-light">
-                        Your booking for <span className="text-stone-900 font-medium text-fuchsia-600">Women’s Pilates Sculpt</span> is confirmed.
+                    <p className="text-xl text-stone-500 font-light leading-relaxed">
+                        Your booking for <span className="text-stone-900 font-medium text-fuchsia-600">Sacred Movement</span> is confirmed. We look forward to seeing you and your child.
                     </p>
                 </div>
+
+                {/* Transaction Summary (Expanded) */}
+                {session && (
+                    <div className="bg-stone-50 border border-stone-100 rounded-3xl p-8 space-y-6 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-200 text-left">
+                        <div className="pb-4 border-b border-stone-200/50">
+                            <span className="text-[10px] text-stone-400 font-bold uppercase tracking-[0.2em] block mb-2">Customer Details</span>
+                            <p className={`text-lg font-bold text-stone-900 ${Fonts.sora.className}`}>{session.customer_name}</p>
+                            <p className="text-sm text-stone-500">{session.customer_email}</p>
+                        </div>
+
+                        <div className="grid grid-cols-2 gap-8">
+                            <div>
+                                <span className="text-[10px] text-stone-400 font-bold uppercase tracking-[0.2em] block mb-1">Date</span>
+                                <p className="text-sm font-medium text-stone-700">{session.date}</p>
+                            </div>
+                            <div>
+                                <span className="text-[10px] text-stone-400 font-bold uppercase tracking-[0.2em] block mb-1">Status</span>
+                                <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-bold bg-green-50 text-green-700 uppercase tracking-wider border border-green-100">
+                                    Booked
+                                </span>
+                            </div>
+                        </div>
+
+                        <div className="pt-4 flex justify-between items-center border-t border-stone-200/50">
+                            <span className="text-sm font-bold text-stone-900 uppercase tracking-widest">Donation Amount</span>
+                            <span className={`text-3xl font-bold text-stone-900 ${Fonts.sora.className}`}>${session.amount}</span>
+                        </div>
+                        <p className="text-xs text-stone-400 italic">
+                            100% of these proceeds will be donated to local Pittsburgh organizations supporting children in need.
+                        </p>
+                    </div>
+                )}
 
                 <div className="mt-20 pt-12 border-t border-stone-100 grid grid-cols-1 md:grid-cols-2 gap-12 text-left">
                     <div className="space-y-4">
@@ -46,13 +78,13 @@ export default async function ThankYouPage({ searchParams }: PageProps) {
                                 "The studio is located on an upper floor and requires walking up two flights of stairs.",
                                 "Please wear comfortable clothing and bring a mat.",
                                 "Arrive a few minutes early to get settled.",
-                                "Complete waiver before starting class."
+                                "A waiver is required for both caregiver and child."
                             ].map((item, i) => (
                                 <div key={i} className="flex gap-3 text-stone-500 text-sm leading-relaxed">
                                     <span className="text-stone-300 flex-shrink-0">•</span>
-                                    {item === "Complete waiver before starting class." ? (
+                                    {item === "A waiver is required for both caregiver and child." ? (
                                         <span>
-                                            Complete <Link href="/waiver" className="text-fuchsia-600 font-medium hover:underline">waiver</Link> before starting class.
+                                            A <Link href="/waiver" className="text-fuchsia-600 font-medium hover:underline">waiver</Link> is required for both caregiver and child.
                                         </span>
                                     ) : (
                                         <span>{item}</span>
@@ -100,10 +132,7 @@ export default async function ThankYouPage({ searchParams }: PageProps) {
                         </div>
                         <h3 className={`text-lg font-bold text-stone-900 ${Fonts.sora.className} mb-2`}>Class Schedule</h3>
                         <p className="text-stone-500 text-sm leading-relaxed">
-                            Classes are every <span className="font-semibold text-stone-700">Sunday at 10:00 AM</span> at {About.address.complete}.
-                        </p>
-                        <p className="text-stone-500 text-sm leading-relaxed">
-                            Directions: <a href={About.address.googleMaps} className="text-fuchsia-600 font-medium">Google Maps</a>, <a href={About.address.appleMaps} className="text-fuchsia-600 font-medium">Apple Maps</a>
+                            Classes are every <span className="font-semibold text-stone-700">Sunday at 11:00 AM</span> at {About.address.complete}.
                         </p>
                     </div>
 
@@ -111,43 +140,13 @@ export default async function ThankYouPage({ searchParams }: PageProps) {
                         <div className="size-10 rounded-2xl bg-fuchsia-50 flex items-center justify-center mb-6">
                             <Mail className="size-5 text-fuchsia-500" />
                         </div>
-                        <h3 className={`text-lg font-bold text-stone-900 ${Fonts.sora.className} mb-2`}>Manage your membership</h3>
+                        <h3 className={`text-lg font-bold text-stone-900 ${Fonts.sora.className} mb-2`}>Questions?</h3>
                         <p className="text-stone-500 text-sm leading-relaxed">
-                            If you subscribed to a membership, you can manage your membership any time through your <Link href="/dashboard" className="text-fuchsia-600 font-medium">account dashboard</Link> or by contacting us at <Link href={`mailto:${About.email}`} className="text-fuchsia-600 font-medium">{About.email}</Link>.
+                            If you have any questions before the class, feel free to reach out to us at <Link href={`mailto:${About.email}`} className="text-fuchsia-600 font-medium">{About.email}</Link>.
                         </p>
                     </div>
 
                 </div>
-
-                {/* Transaction Summary (Expanded) */}
-                {session && (
-                    <div className="bg-stone-50 border border-stone-100 rounded-3xl p-8 space-y-6 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-200 text-left">
-                        <div className="pb-4 border-b border-stone-200/50">
-                            <span className="text-[10px] text-stone-400 font-bold uppercase tracking-[0.2em] block mb-2">Customer Details</span>
-                            <p className={`text-lg font-bold text-stone-900 ${Fonts.sora.className}`}>{session.customer_name}</p>
-                            <p className="text-sm text-stone-500">{session.customer_email}</p>
-                        </div>
-
-                        <div className="grid grid-cols-2 gap-8">
-                            <div>
-                                <span className="text-[10px] text-stone-400 font-bold uppercase tracking-[0.2em] block mb-1">Date</span>
-                                <p className="text-sm font-medium text-stone-700">{session.date}</p>
-                            </div>
-                            <div>
-                                <span className="text-[10px] text-stone-400 font-bold uppercase tracking-[0.2em] block mb-1">Status</span>
-                                <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-bold bg-green-50 text-green-700 uppercase tracking-wider border border-green-100">
-                                    {session.status}
-                                </span>
-                            </div>
-                        </div>
-
-                        <div className="pt-4 flex justify-between items-center border-t border-stone-200/50">
-                            <span className="text-sm font-bold text-stone-900 uppercase tracking-widest">Total Paid</span>
-                            <span className={`text-3xl font-bold text-stone-900 ${Fonts.sora.className}`}>${session.amount}</span>
-                        </div>
-                    </div>
-                )}
-
 
                 <div className="space-y-6 pt-8">
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">

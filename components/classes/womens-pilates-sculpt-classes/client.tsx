@@ -8,7 +8,7 @@ import { About } from "@/config/about";
 import { ClockIcon, Loader2 } from "lucide-react";
 import { stripeCheckout } from "@/utils/stripe-checkout";
 
-export function SundayClasses() {
+export function WomensPilatesSculptClassesClient() {
     const [loadingOffering, setLoadingOffering] = useState<string | null>(null);
 
     const handleSelectOffering = async (c: typeof PKWY_OFFERINGS[0]) => {
@@ -157,7 +157,8 @@ export function SundayClasses() {
                             {[
                                 "The studio is located on an upper floor and requires walking up two flights of stairs.",
                                 "Please wear comfortable clothing and bring a mat.",
-                                "Arrive a few minutes early to get settled."
+                                "Arrive a few minutes early to get settled.",
+                                "You will be required to sign a waiver before your first class.",
                             ].map((item, i) => (
                                 <div key={i} className="flex gap-3 text-stone-500 text-sm leading-relaxed">
                                     <span className="text-stone-300 flex-shrink-0">•</span>

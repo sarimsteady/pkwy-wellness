@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export function KingsleyClasses() {
     return (
-        <section className="py-6 px-6 relative overflow-hidden">
+        <section id="kingsley-classes" className="py-6 px-6 relative overflow-hidden">
             <div className="max-w-7xl mx-auto">
                 <div className="bg-white border border-stone-100 rounded-[3rem] p-8 md:p-16 shadow-[0_32px_64px_-16px_rgba(0,0,0,0.03)] relative overflow-hidden group hover:border-fuchsia-200/50 transition-all duration-700">
                     {/* Background Decorative Element */}
@@ -24,24 +24,23 @@ export function KingsleyClasses() {
                             </div>
 
                             <div className="space-y-6">
-                                <div className="flex flex-wrap items-center gap-4 group/item">
-                                    <div className="size-12 rounded-2xl bg-stone-50 border border-stone-100 flex items-center justify-center text-stone-400 group-hover/item:text-fuchsia-500 group-hover/item:bg-fuchsia-50 transition-colors duration-300">
+                                <div className="flex items-start gap-4 group/item">
+                                    <div className="size-12 rounded-2xl bg-stone-50 border border-stone-100 flex items-center justify-center text-stone-400 group-hover/item:text-fuchsia-500 group-hover/item:bg-fuchsia-50 transition-colors duration-300 shrink-0">
                                         <ClockIcon className="size-5" />
                                     </div>
-                                    <div>
+                                    <div className="pt-1.5">
                                         <p className="font-semibold text-stone-900 leading-none">Fridays and Saturdays</p>
                                         <p className="text-sm text-stone-400 mt-1">Morning Sessions</p>
                                     </div>
                                 </div>
 
-                                <div className="flex items-center gap-4 group/item">
-                                    <div className="size-12 rounded-2xl bg-stone-50 border border-stone-100 flex items-center justify-center text-stone-400 group-hover/item:text-fuchsia-500 group-hover/item:bg-fuchsia-50 transition-colors duration-300">
+                                <div className="flex items-start gap-4 group/item">
+                                    <div className="size-12 rounded-2xl bg-stone-50 border border-stone-100 flex items-center justify-center text-stone-400 group-hover/item:text-fuchsia-500 group-hover/item:bg-fuchsia-50 transition-colors duration-300 shrink-0">
                                         <MapPin className="size-5" />
                                     </div>
-                                    <div>
+                                    <div className="pt-1.5">
                                         <p className="font-semibold text-stone-900 leading-none">The Kingsley Association</p>
-                                        <p className="text-sm text-stone-400 mt-1">
-                                            6435 Frankstown Ave, Pittsburgh, PA</p>
+                                        <p className="text-sm text-stone-400 mt-1">6435 Frankstown Ave, Pittsburgh, PA</p>
                                     </div>
                                 </div>
                             </div>

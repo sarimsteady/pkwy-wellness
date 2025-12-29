@@ -1,3 +1,5 @@
+export const SACRED_MOVEMENT_CLASS_STRIPE_LINK = process.env.VERCEL_ENV === "production" && process.env.VERCEL_URL !== "dev.pkwywellness.com" ? "https://book.stripe.com/dRmaEW5eZaWm2tCgHr3AY07" : "https://book.stripe.com/test_6oU14mfTD1lMd8gdvf3AY04";
+
 export const PKWY_OFFERINGS: {
     title: string;
     description: string;
