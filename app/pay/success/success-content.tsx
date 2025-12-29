@@ -103,9 +103,6 @@ export function PaymentSuccessContent() {
               <p className="text-sm text-gray-600 mt-1">Amount Paid</p>
             </div>
           )}
-          <p className="text-sm text-gray-600">
-            A confirmation email has been sent to your email address.
-          </p>
           <div className="pt-4">
             <Link href="/">
               <Button size="lg" className="w-full">

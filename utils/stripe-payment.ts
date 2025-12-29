@@ -2,6 +2,7 @@ export interface PaymentParams {
   amount: string;
   customer?: string;
   paymentFor?: string;
+  description?: string;
 }
 
 const PAYMENT_SECRET = process.env.PAYMENT_SECRET || 'default-secret-key-change-in-production';
@@ -19,7 +20,7 @@ function base64UrlDecode(str: string): string {
 export function decodePaymentToken(token: string): PaymentParams | null {
   try {
     const [encoded, providedChecksum] = token.split('.');
-    
+
     if (!encoded || !providedChecksum) {
       return null;
     }
@@ -33,7 +34,7 @@ export function decodePaymentToken(token: string): PaymentParams | null {
     // Decode the data
     const decoded = base64UrlDecode(encoded);
     const data = JSON.parse(decoded);
-    
+
     // Validate required fields
     if (!data.amount || !data.timestamp) {
       return null;

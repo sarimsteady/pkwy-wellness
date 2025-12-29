@@ -1,6 +1,6 @@
 'use server';
 
-import { PaymentParams, decodePaymentToken } from '@/utils/payment';
+import { PaymentParams, decodePaymentToken } from '@/utils/stripe-payment';
 
 /**
  * Server action to decode payment token

@@ -36,6 +36,82 @@ export default async function ThankYouPage({ searchParams }: PageProps) {
                     </p>
                 </div>
 
+                <div className="mt-20 pt-12 border-t border-stone-100 grid grid-cols-1 md:grid-cols-2 gap-12 text-left">
+                    <div className="space-y-4">
+                        <h4 className={`text-stone-900 font-bold uppercase tracking-[0.2em] text-[10px] ${Fonts.sora.className}`}>
+                            Know Before You Come
+                        </h4>
+                        <div className="space-y-2">
+                            {[
+                                "The studio is located on an upper floor and requires walking up two flights of stairs.",
+                                "Please wear comfortable clothing and bring a mat.",
+                                "Arrive a few minutes early to get settled."
+                            ].map((item, i) => (
+                                <div key={i} className="flex gap-3 text-stone-500 text-sm leading-relaxed">
+                                    <span className="text-stone-300 flex-shrink-0">•</span>
+                                    <span>{item}</span>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+
+                    <div className="space-y-4 md:flex md:flex-col">
+                        <h4 className={`text-stone-900 font-bold uppercase tracking-[0.2em] text-[10px] ${Fonts.sora.className}`}>
+                            Location
+                        </h4>
+                        <div className="space-y-2">
+                            <p className="text-stone-500 text-sm leading-relaxed">
+                                {About.address.complete}
+                            </p>
+                            <div className="flex gap-4 md:justify-end text-xs font-bold uppercase tracking-widest pt-2">
+                                <a
+                                    href={About.address.googleMaps}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-primary hover:text-stone-900 transition-colors duration-300"
+                                >
+                                    Google Maps
+                                </a>
+                                <a
+                                    href={About.address.appleMaps}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-primary hover:text-stone-900 transition-colors duration-300"
+                                >
+                                    Apple Maps
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {/* What to Expect Section */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
+                    <div className="bg-white border border-stone-100 rounded-3xl p-8 shadow-sm hover:shadow-md transition-shadow duration-300">
+                        <div className="size-10 rounded-2xl bg-fuchsia-50 flex items-center justify-center mb-6">
+                            <Calendar className="size-5 text-fuchsia-500" />
+                        </div>
+                        <h3 className={`text-lg font-bold text-stone-900 ${Fonts.sora.className} mb-2`}>Class Schedule</h3>
+                        <p className="text-stone-500 text-sm leading-relaxed">
+                            Classes are every <span className="font-semibold text-stone-700">Sunday at 10:00 AM</span> at {About.address.complete}.
+                        </p>
+                        <p className="text-stone-500 text-sm leading-relaxed">
+                            Directions: <a href={About.address.googleMaps} className="text-fuchsia-600 font-medium">Google Maps</a>, <a href={About.address.appleMaps} className="text-fuchsia-600 font-medium">Apple Maps</a>
+                        </p>
+                    </div>
+
+                    <div className="bg-white border border-stone-100 rounded-3xl p-8 shadow-sm hover:shadow-md transition-shadow duration-300">
+                        <div className="size-10 rounded-2xl bg-fuchsia-50 flex items-center justify-center mb-6">
+                            <Mail className="size-5 text-fuchsia-500" />
+                        </div>
+                        <h3 className={`text-lg font-bold text-stone-900 ${Fonts.sora.className} mb-2`}>Manage your membership</h3>
+                        <p className="text-stone-500 text-sm leading-relaxed">
+                            If you subscribed to a membership, you can manage your membership any time through your <Link href="/dashboard" className="text-fuchsia-600 font-medium">account dashboard</Link> or by contacting us at <Link href={`mailto:${About.email}`} className="text-fuchsia-600 font-medium">{About.email}</Link>.
+                        </p>
+                    </div>
+
+                </div>
+
                 {/* Transaction Summary (Expanded) */}
                 {session && (
                     <div className="bg-stone-50 border border-stone-100 rounded-3xl p-8 space-y-6 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-200 text-left">
@@ -65,32 +141,6 @@ export default async function ThankYouPage({ searchParams }: PageProps) {
                     </div>
                 )}
 
-                {/* What to Expect Section */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
-                    <div className="bg-white border border-stone-100 rounded-3xl p-8 shadow-sm hover:shadow-md transition-shadow duration-300">
-                        <div className="size-10 rounded-2xl bg-fuchsia-50 flex items-center justify-center mb-6">
-                            <Calendar className="size-5 text-fuchsia-500" />
-                        </div>
-                        <h3 className={`text-lg font-bold text-stone-900 ${Fonts.sora.className} mb-2`}>Class Schedule</h3>
-                        <p className="text-stone-500 text-sm leading-relaxed">
-                            Classes are every <span className="font-semibold text-stone-700">Sunday at 10:00 AM</span> at {About.address.complete}.
-                        </p>
-                        <p className="text-stone-500 text-sm leading-relaxed">
-                            Directions: <a href={About.address.googleMaps} className="text-fuchsia-600 font-medium">Google Maps</a>, <a href={About.address.appleMaps} className="text-fuchsia-600 font-medium">Apple Maps</a>
-                        </p>
-                    </div>
-
-                    <div className="bg-white border border-stone-100 rounded-3xl p-8 shadow-sm hover:shadow-md transition-shadow duration-300">
-                        <div className="size-10 rounded-2xl bg-fuchsia-50 flex items-center justify-center mb-6">
-                            <Mail className="size-5 text-fuchsia-500" />
-                        </div>
-                        <h3 className={`text-lg font-bold text-stone-900 ${Fonts.sora.className} mb-2`}>Manage your membership</h3>
-                        <p className="text-stone-500 text-sm leading-relaxed">
-                            You can manage your membership any time <Link href="/dashboard" className="text-fuchsia-600 font-medium">here</Link> or by contacting us at {About.email}.
-                        </p>
-                    </div>
-
-                </div>
 
                 <div className="space-y-6 pt-8">
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">

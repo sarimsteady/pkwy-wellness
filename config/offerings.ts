@@ -3,16 +3,13 @@ export const PKWY_OFFERINGS: {
     description: string;
     classes: number;
     price_per_class: number;
-    stripe_payment_link: string;
+    stripe_payment_link?: string;
 }[] = [
         {
             title: "Intro Class",
             description: "A one-time introduction to Women’s Pilates Sculpt. Ideal for first-time attendees who want to experience the class before committing.",
             classes: 1,
-            price_per_class: 15,
-            stripe_payment_link: process.env.VERCEL_ENV === "production" && process.env.VERCEL_URL !== "dev.pkwywellness.com"
-                ? "https://buy.stripe.com/cNi5kC9vfc0qc4c9eZ3AY03"
-                : "https://buy.stripe.com/test_14A7sK6ig2kn6Nh9GA1Fe01"
+            price_per_class: 15
         },
         {
             title: "Monthly Membership",
@@ -36,9 +33,6 @@ export const PKWY_OFFERINGS: {
             title: "Drop-In",
             description: "A drop-in class for Women’s Pilates Sculpt. No commitment required. Ideal for those in need of a quick fix or a refresher.",
             classes: 1,
-            price_per_class: 20,
-            stripe_payment_link: process.env.VERCEL_ENV === "production" && process.env.VERCEL_URL !== "dev.pkwywellness.com"
-                ? "https://buy.stripe.com/cNi5kC9vfc0qc4c9eZ3AY03"
-                : "https://buy.stripe.com/test_14A7sK6ig2kn6Nh9GA1Fe01"
+            price_per_class: 20
         },
     ];

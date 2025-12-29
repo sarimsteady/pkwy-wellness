@@ -7,7 +7,7 @@ import { Button } from '@/components/ui/button';
 import { ArrowLeft } from 'lucide-react';
 import Link from 'next/link';
 import { About } from '@/config/about';
-import { PaymentParams } from '@/utils/payment';
+import { PaymentParams } from '@/utils/stripe-payment';
 import { decodePaymentTokenAction } from '@/utils/decode-payment-token';
 import { stripeCheckout } from '@/utils/stripe-checkout';
 
@@ -152,7 +152,7 @@ export function PaymentPageContent() {
               )}
               {paymentData.customer && (
                 <p className="text-sm text-gray-500">
-                 {paymentData.customer}
+                  {paymentData.customer}
                 </p>
               )}
             </div>
@@ -163,12 +163,12 @@ export function PaymentPageContent() {
         <Card>
           <CardContent className="pt-6">
             <div className="text-center space-y-4">
-              <Button 
-                size="lg" 
+              <Button
+                size="lg"
                 className="w-full"
                 onClick={async () => {
                   if (!paymentData || !parsedAmount) return;
-                  
+
                   setIsProcessing(true);
                   try {
                     const checkoutUrl = await stripeCheckout(parsedAmount, paymentData, tokenParam || undefined);

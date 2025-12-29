@@ -1,10 +1,53 @@
+'use client';
+
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Fonts } from "@/config/fonts";
 import { PKWY_OFFERINGS } from "@/config/offerings";
 import { About } from "@/config/about";
-import { ClockIcon } from "lucide-react";
+import { ClockIcon, Loader2 } from "lucide-react";
+import { stripeCheckout } from "@/utils/stripe-checkout";
 
-export async function SundayClasses() {
+export function SundayClasses() {
+    const [loadingOffering, setLoadingOffering] = useState<string | null>(null);
+
+    const handleSelectOffering = async (c: typeof PKWY_OFFERINGS[0]) => {
+        if (c.classes > 1) {
+
+            if (!c.stripe_payment_link) {
+                alert("Payment link not found for this offering. Please try again.");
+                return;
+            }
+
+            // Keep existing behavior for memberships
+            window.location.href = c.stripe_payment_link;
+            return;
+        }
+
+        setLoadingOffering(c.title);
+        try {
+            const checkoutUrl = await stripeCheckout(
+                c.price_per_class * c.classes,
+                {
+                    amount: (c.price_per_class * c.classes).toString(),
+                    paymentFor: c.title,
+                    description: c.description,
+                }
+            );
+
+            if (checkoutUrl) {
+                window.location.href = checkoutUrl;
+            } else {
+                alert("Failed to create checkout session. Please try again.");
+            }
+        } catch (error) {
+            console.error('Checkout error:', error);
+            alert("An error occurred. Please try again.");
+        } finally {
+            setLoadingOffering(null);
+        }
+    };
+
     return (
         <main className={`${Fonts.quicksand.className}`}>
             <section>
@@ -13,6 +56,7 @@ export async function SundayClasses() {
                         const isRecurring = c.classes > 1;
                         const price = c.price_per_class;
                         const totalPrice = price * c.classes;
+                        const isLoading = loadingOffering === c.title;
 
                         return (
                             <div
@@ -81,16 +125,20 @@ export async function SundayClasses() {
                                     </div>
 
                                     <div className="mt-auto pt-4">
-                                        <a href={c.stripe_payment_link} className="block w-full">
-                                            <Button
-                                                size="lg"
-                                                className="w-full rounded-2xl py-7 transition-all duration-300 shadow-xl shadow-stone-200"
-                                            >
+                                        <Button
+                                            size="lg"
+                                            className="w-full rounded-2xl py-7 transition-all duration-300 shadow-xl shadow-stone-200"
+                                            onClick={() => handleSelectOffering(c)}
+                                            disabled={isLoading || (loadingOffering !== null)}
+                                        >
+                                            {isLoading ? (
+                                                <Loader2 className="size-4 animate-spin" />
+                                            ) : (
                                                 <span className={`text-base font-semibold ${Fonts.sora.className}`}>
                                                     Select Plan
                                                 </span>
-                                            </Button>
-                                        </a>
+                                            )}
+                                        </Button>
                                     </div>
                                 </div>
                             </div>

@@ -1,7 +1,7 @@
 'use server';
 
 import Stripe from 'stripe';
-import { PaymentParams } from '@/utils/payment';
+import { PaymentParams } from '@/utils/stripe-payment';
 import { About } from '@/config/about';
 import { headers } from 'next/headers';
 import { stripeClient } from '@/utils/stripe-client';
@@ -26,7 +26,7 @@ export async function stripeCheckout(
                         currency: 'usd',
                         product_data: {
                             name: paymentData.paymentFor || 'Payment',
-                            description: `Payment to ${About.companyLegalName}`,
+                            description: paymentData.description || `Payment to ${About.companyLegalName}`,
                         },
                         unit_amount: amountInCents,
                     },
@@ -34,13 +34,14 @@ export async function stripeCheckout(
                 },
             ],
             mode: 'payment',
-            success_url: `${baseUrl}/pay/success?session_id={CHECKOUT_SESSION_ID}`,
+            success_url: `${baseUrl}/thank-you/womens-pilates-sculpt?session_id={CHECKOUT_SESSION_ID}`,
             cancel_url: token
                 ? `${baseUrl}/pay?token=${encodeURIComponent(token)}`
                 : `${baseUrl}/pay`,
             customer_email: paymentData.customer,
             metadata: {
                 paymentFor: paymentData.paymentFor || '',
+                description: paymentData.description || '',
                 amount: amount.toFixed(2),
             },
         };
