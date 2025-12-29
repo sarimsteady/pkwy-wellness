@@ -52,7 +52,7 @@ export default async function ThankYouPage({ searchParams }: PageProps) {
                                     <span className="text-stone-300 flex-shrink-0">•</span>
                                     {item === "Complete waiver before starting class." ? (
                                         <span>
-                                            Complete <Link href="/waiver" className="text-fuchsia-600 font-medium hover:underline">waiver</Link> before starting class.
+                                            Complete <Link href="/waiver" target="_blank" className="text-fuchsia-600 font-medium hover:underline">waiver</Link> before starting class.
                                         </span>
                                     ) : (
                                         <span>{item}</span>

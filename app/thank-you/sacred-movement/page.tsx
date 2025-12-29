@@ -84,7 +84,7 @@ export default async function SacredMovementThankYouPage({ searchParams }: PageP
                                     <span className="text-stone-300 flex-shrink-0">•</span>
                                     {item === "A waiver is required for both caregiver and child." ? (
                                         <span>
-                                            A <Link href="/waiver" className="text-fuchsia-600 font-medium hover:underline">waiver</Link> is required for both caregiver and child.
+                                            A <Link href="/waiver" target="_blank" className="text-fuchsia-600 font-medium hover:underline">waiver</Link> is required for both caregiver and child.
                                         </span>
                                     ) : (
                                         <span>{item}</span>
