@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { About } from "@/config/about";
 import { Fonts } from "@/config/fonts";
 import { verifyStripeSession } from "@/utils/stripe-verify-session";
-import { CheckCircle2, Mail, Calendar, ArrowLeft, FileText } from "lucide-react";
+import { CheckCircle2, Mail, Calendar, ArrowLeft } from "lucide-react";
 import Link from "next/link";
 
 interface PageProps {
