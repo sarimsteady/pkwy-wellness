@@ -77,7 +77,7 @@ export function SacredMovementClasses() {
                                 >
                                     <Button size="lg" className="w-full md:w-auto rounded-2xl px-8 py-7 bg-primary hover:bg-primary/80 text-white shadow-xl shadow-stone-200 transition-all duration-300 group/btn">
                                         <span className={`text-base font-semibold ${Fonts.sora.className}`}>
-                                            Make a Donation
+                                            Book Now
                                         </span>
                                         <ExternalLink className="size-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
                                     </Button>
