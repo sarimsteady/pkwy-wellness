@@ -41,7 +41,7 @@ export function Footer() {
             <h4 className="text-sm font-semibold text-gray-900">Quick Links</h4>
             <ul className="space-y-3">
               <li>
-                <a href="#home" className="text-sm text-gray-600 hover:text-primary transition-colors duration-200">
+                <a href="/#home" className="text-sm text-gray-600 hover:text-primary transition-colors duration-200">
                   Home
                 </a>
               </li>
@@ -51,17 +51,17 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <a href="#womens-pilates-sculpt-classes" className="text-sm text-gray-600 hover:text-primary transition-colors duration-200">
+                <a href="/#womens-pilates-sculpt-classes" className="text-sm text-gray-600 hover:text-primary transition-colors duration-200">
                   Womens Pilates Sculpt
                 </a>
               </li>
               <li>
-                <a href="#sacred-movement-classes" className="text-sm text-gray-600 hover:text-primary transition-colors duration-200">
+                <a href="/#sacred-movement-classes" className="text-sm text-gray-600 hover:text-primary transition-colors duration-200">
                   Mother-Daughter Classes
                 </a>
               </li>
               <li>
-                <a href="#kingsley-classes" className="text-sm text-gray-600 hover:text-primary transition-colors duration-200">
+                <a href="/#kingsley-classes" className="text-sm text-gray-600 hover:text-primary transition-colors duration-200">
                   Kingsley Center Classes
                 </a>
               </li>
