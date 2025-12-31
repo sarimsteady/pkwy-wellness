@@ -15,12 +15,17 @@ export function KingsleyClasses() {
                         <div className="space-y-8">
                             <div className="space-y-4">
                                 <h2 className={`text-4xl md:text-5xl font-bold text-stone-900 ${Fonts.sora.className} tracking-tight leading-tight`}>
-                                    Reform Pilates <br />
+                                    Pilates <br />
                                     <span className="text-primary">at Kingsley Center</span>
                                 </h2>
                                 <p className={`text-lg text-stone-500 font-light leading-relaxed max-w-md ${Fonts.quicksand.className}`}>
-                                    Join Samantha for a specialized Reform Pilates session held every Friday and Saturday morning at Kingsley Center in Pittsburgh.
+                                    Join Samantha for a Pilates session held every Friday evening and Saturday morning at Kingsley Center in Pittsburgh.
                                 </p>
+                            </div>
+
+                            {/* Mobile Image */}
+                            <div className="block lg:hidden">
+                                <KingsleyImage />
                             </div>
 
                             <div className="space-y-6">
@@ -61,19 +66,28 @@ export function KingsleyClasses() {
                             </div>
                         </div>
 
-                        <div className="relative aspect-[4/3] rounded-[2.5rem] overflow-hidden bg-stone-100 border border-stone-100 group-hover:shadow-2xl transition-all duration-700">
-                            <Image
-                                src="/misc/pilates-session-2.png"
-                                alt="Samantha teaching Reform Pilates at LA Fitness"
-                                fill
-                                className="object-cover group-hover:scale-105 transition-transform duration-700"
-                            />
-                            {/* Overlay to ensure depth */}
-                            <div className="absolute inset-0 bg-stone-900/5 group-hover:bg-transparent transition-colors duration-700" />
+                        {/* Desktop Image */}
+                        <div className="hidden lg:block">
+                            <KingsleyImage />
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+    );
+}
+
+function KingsleyImage() {
+    return (
+        <div className="relative aspect-[4/3] rounded-[2.5rem] overflow-hidden bg-stone-100 border border-stone-100 group-hover:shadow-2xl transition-all duration-700">
+            <Image
+                src="/misc/pilates-session-2.png"
+                alt="Samantha teaching Reform Pilates at LA Fitness"
+                fill
+                className="object-cover group-hover:scale-105 transition-transform duration-700"
+            />
+            {/* Overlay to ensure depth */}
+            <div className="absolute inset-0 bg-stone-900/5 group-hover:bg-transparent transition-colors duration-700" />
+        </div>
     );
 }

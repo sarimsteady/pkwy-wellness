@@ -113,7 +113,7 @@ export default async function ThankYouPage({ searchParams }: PageProps) {
                         </div>
                         <h3 className={`text-lg font-bold text-stone-900 ${Fonts.sora.className} mb-2`}>Manage your membership</h3>
                         <p className="text-stone-500 text-sm leading-relaxed">
-                            If you subscribed to a membership, you can manage your membership any time through your <Link href="/dashboard" className="text-fuchsia-600 font-medium">account dashboard</Link> or by contacting us at <Link href={`mailto:${About.email}`} className="text-fuchsia-600 font-medium">{About.email}</Link>.
+                            If you subscribed to a membership, you can manage your membership any time through your <Link href="/dashboard" className="text-fuchsia-600 font-medium">account dashboard</Link> or by contacting us at <Link href={`mailto:${About.email}`} className="text-fuchsia-600 font-medium">{About.email}</Link>. Review our terms of service <Link href="/legal/terms" className="text-fuchsia-600 font-medium">here</Link>.
                         </p>
                     </div>
 

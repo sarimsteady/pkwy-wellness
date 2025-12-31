@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Fonts } from "@/config/fonts";
 import { PKWY_OFFERINGS } from "@/config/offerings";
 import { About } from "@/config/about";
-import { ClockIcon, Loader2 } from "lucide-react";
+import { AlertCircleIcon, ClockIcon, Loader2 } from "lucide-react";
 import { stripeCheckout } from "@/utils/stripe-checkout";
 
 export function WomensPilatesSculptClassesClient() {
@@ -150,9 +150,12 @@ export function WomensPilatesSculptClassesClient() {
                 <div className="mt-10 pt-6 border-t border-stone-100 max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12 text-left">
 
                     <div className="space-y-4">
-                        <h4 className={`text-stone-900 font-bold uppercase tracking-[0.2em] text-[10px] ${Fonts.sora.className}`}>
-                            Know Before You Come
-                        </h4>
+                        <div className="flex items-center gap-2">
+                            <h4 className={`text-stone-900 font-bold uppercase tracking-[0.2em] text-[10px] ${Fonts.sora.className}`}>
+                                Know Before You Come
+                            </h4>
+                            <AlertCircleIcon className="size-4 text-fuchsia-500" />
+                        </div>
                         <div className="space-y-2">
                             {[
                                 "The studio is located on an upper floor and requires walking up two flights of stairs.",
@@ -174,7 +177,7 @@ export function WomensPilatesSculptClassesClient() {
                             Membership Details
                         </h4>
                         <p className="text-stone-500 text-sm leading-relaxed max-w-md">
-                            All memberships renew automatically every month. You can manage your subscription anytime through your <a href="/dashboard" className="text-primary font-medium hover:underline">account dashboard</a> or by contacting us at <a href={`mailto:${About.email}`} className="text-primary font-medium hover:underline">{About.email}</a>.
+                            All memberships renew automatically every month. Classes do not roll over. You can manage your subscription anytime through your <a href="/dashboard" className="text-primary font-medium hover:underline">account dashboard</a> or by contacting us at <a href={`mailto:${About.email}`} className="text-primary font-medium hover:underline">{About.email}</a>. Review our terms of service <a href="/legal/terms" className="text-primary font-medium hover:underline">here</a>.
                         </p>
                     </div>
 

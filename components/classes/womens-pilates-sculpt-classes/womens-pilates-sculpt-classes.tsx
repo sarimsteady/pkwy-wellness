@@ -26,7 +26,7 @@ export async function WomensPilatesSculptClasses() {
                 <div className="bg-muted/50 p-4 m-8 md:max-w-lg mx-auto rounded-2xl text-sm font-light text-gray-600">
                     <div className="space-y-4">
                         <p>
-                            <strong className="text-black">&quot;Pilates Sculpt&quot;</strong> blends Pilates-inspired movement, strength-focused sequences, and intentional breath in a space that honors the body as a gift and movement as a form of care.
+                            <strong className="text-black">Pilates Sculpt</strong> blends Pilates-inspired movement, strength-focused sequences, and intentional breath in a space that honors the body as a gift and movement as a form of care.
                         </p>
                         <p>
                             Classes are upbeat, music-driven, and designed to build endurance, alignment, and confidence in a welcoming women-only environment.
@@ -46,14 +46,14 @@ export async function WomensPilatesSculptClasses() {
                             className="group p-6 bg-white border border-stone-100 rounded-2xl hover:border-fuchsia-500/30 hover:shadow-lg transition-all duration-300 text-left"
                         >
                             <h4 className={`text-stone-900 font-bold ${Fonts.sora.className}`}>Sacred Movement</h4>
-                            <p className="text-sm text-stone-500 mt-1 font-light"><strong>Sundays at 11 AM</strong> • For Caregivers & Children</p>
+                            <p className="text-sm text-stone-500 mt-1 font-light"><strong>Sunday Morning</strong> • For Mothers & Daughters</p>
                         </a>
                         <a
                             href="#kingsley-classes"
                             className="group p-6 bg-white border border-stone-100 rounded-2xl hover:border-fuchsia-500/30 hover:shadow-lg transition-all duration-300 text-left"
                         >
                             <h4 className={`text-stone-900 font-bold ${Fonts.sora.className}`}>Kingsley Center</h4>
-                            <p className="text-sm text-stone-500 mt-1 font-light"><strong>Friday & Saturday mornings</strong> • Reform Pilates</p>
+                            <p className="text-sm text-stone-500 mt-1 font-light"><strong>Friday Evening & Saturday Morning</strong> • Everyone</p>
                         </a>
                     </div>
                 </div>

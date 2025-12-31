@@ -41,9 +41,9 @@ export function Footer() {
             <h4 className="text-sm font-semibold text-gray-900">Quick Links</h4>
             <ul className="space-y-3">
               <li>
-                <a href="/#home" className="text-sm text-gray-600 hover:text-primary transition-colors duration-200">
+                <Link href="/#home" className="text-sm text-gray-600 hover:text-primary transition-colors duration-200">
                   Home
-                </a>
+                </Link>
               </li>
               <li>
                 <Link href="/#book" className="text-sm text-gray-600 hover:text-primary transition-colors duration-200">
@@ -51,19 +51,19 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <a href="/#womens-pilates-sculpt-classes" className="text-sm text-gray-600 hover:text-primary transition-colors duration-200">
+                <Link href="/#womens-pilates-sculpt-classes" className="text-sm text-gray-600 hover:text-primary transition-colors duration-200">
                   Womens Pilates Sculpt
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/#sacred-movement-classes" className="text-sm text-gray-600 hover:text-primary transition-colors duration-200">
+                <Link href="/#sacred-movement-classes" className="text-sm text-gray-600 hover:text-primary transition-colors duration-200">
                   Mother-Daughter Classes
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/#kingsley-classes" className="text-sm text-gray-600 hover:text-primary transition-colors duration-200">
+                <Link href="/#kingsley-classes" className="text-sm text-gray-600 hover:text-primary transition-colors duration-200">
                   Kingsley Center Classes
-                </a>
+                </Link>
               </li>
               <li>
                 <Link href="/dashboard" className="text-sm text-gray-600 hover:text-primary transition-colors duration-200">

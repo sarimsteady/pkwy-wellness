@@ -16,7 +16,7 @@ export default function Page() {
       <div className="max-w-4xl mx-auto">
         <div className="bg-white/80 backdrop-blur-sm rounded-3xl shadow-lg p-8">
           <h1 className="text-4xl font-bold text-gray-900 mb-8 text-center">Terms of Service</h1>
-          
+
           <div className="prose prose-primary max-w-none text-gray-700">
             <p className="text-sm text-gray-500 mb-8">
               <strong>Effective Date:</strong> January 1, 2025<br />
@@ -26,8 +26,8 @@ export default function Page() {
             <section className="mb-8">
               <h2 className="text-2xl font-semibold text-gray-900 mb-4">1. Agreement to Terms</h2>
               <p className="mb-4">
-                By accessing and using the services of {About.companyName} (&apos;we,&apos; &apos;our,&apos; or &apos;us&apos;), 
-                you agree to be bound by these Terms of Service and all applicable laws and regulations. 
+                By accessing and using the services of {About.companyName} (&apos;we,&apos; &apos;our,&apos; or &apos;us&apos;),
+                you agree to be bound by these Terms of Service and all applicable laws and regulations.
                 If you do not agree with any of these terms, you are prohibited from using our services.
               </p>
             </section>
@@ -43,12 +43,13 @@ export default function Page() {
                 <li>Corporate wellness programs</li>
                 <li>Online booking and payment services</li>
                 <li>Wellness consultation and guidance</li>
+                <li>Merchandise & physical goods</li>
               </ul>
             </section>
 
             <section className="mb-8">
               <h2 className="text-2xl font-semibold text-gray-900 mb-4">3. Health and Safety Requirements</h2>
-              
+
               <h3 className="text-xl font-medium text-gray-800 mb-3">Health Clearance</h3>
               <ul className="list-disc pl-6 mb-4 space-y-2">
                 <li>You must be physically able to participate in Pilates exercises</li>
@@ -68,13 +69,22 @@ export default function Page() {
 
             <section className="mb-8">
               <h2 className="text-2xl font-semibold text-gray-900 mb-4">4. Booking and Payment Terms</h2>
-              
+
               <h3 className="text-xl font-medium text-gray-800 mb-3">Booking Policy</h3>
               <ul className="list-disc pl-6 mb-4 space-y-2">
                 <li>Sessions must be booked in advance</li>
                 <li>Payment is required at time of booking</li>
                 <li>Session packages have expiration dates as specified</li>
                 <li>Unused sessions may not be refunded after expiration</li>
+                <li>We reserve the right to suspend booking privileges for non-payment</li>
+              </ul>
+
+              <h3 className="text-xl font-medium text-gray-800 mb-3">Membership Terms</h3>
+              <ul className="list-disc pl-6 mb-4 space-y-2">
+                <li>Memberships may be subject to a minimum commitment period (e.g., 3 months)</li>
+                <li>Cancellation of memberships requires specific written notice (e.g., 30 days) prior to the next billing cycle</li>
+                <li>Memberships may be paused for up to 90 days within a 12-month period for medical reasons or travel, subject to approval</li>
+                <li>Membership fees are automated and non-refundable once processed</li>
               </ul>
 
               <h3 className="text-xl font-medium text-gray-800 mb-3">Cancellation Policy</h3>
@@ -94,7 +104,7 @@ export default function Page() {
               </div>
               <p className="mb-4">Please understand that:</p>
               <ul className="list-disc pl-6 mb-4 space-y-2">
-                <li>All payments for services, packages, and memberships are non-refundable</li>
+                <li>All payments for products, services, packages, and memberships are non-refundable</li>
                 <li>This policy applies regardless of usage, satisfaction, or circumstances</li>
                 <li>Session packages and memberships cannot be refunded, even if unused</li>
                 <li>Payment disputes must be resolved directly with {About.companyName}</li>
@@ -106,11 +116,11 @@ export default function Page() {
 
             <section className="mb-8">
               <h2 className="text-2xl font-semibold text-gray-900 mb-4">5. Liability and Risk Assumption</h2>
-              
+
               <div className="bg-red-50 border border-red-200 p-4 rounded-lg mb-4">
                 <p className="font-semibold text-red-800 mb-2">IMPORTANT: READ CAREFULLY</p>
                 <p className="text-red-700">
-                  Participation in Pilates activities involves inherent risks of injury. 
+                  Participation in Pilates activities involves inherent risks of injury.
                   By using our services, you acknowledge and assume these risks.
                 </p>
               </div>
@@ -126,8 +136,8 @@ export default function Page() {
 
               <h3 className="text-xl font-medium text-gray-800 mb-3">Limitation of Liability</h3>
               <p className="mb-4">
-                To the fullest extent permitted by law, {About.companyName} and its instructors 
-                shall not be liable for any injuries, damages, or losses arising from your participation 
+                To the fullest extent permitted by law, {About.companyName} and its instructors
+                shall not be liable for any injuries, damages, or losses arising from your participation
                 in our services, except in cases of gross negligence or willful misconduct.
               </p>
             </section>
@@ -141,65 +151,75 @@ export default function Page() {
                 <li>Respect studio property and equipment</li>
                 <li>Follow all studio rules and policies</li>
                 <li>Maintain confidentiality of other clients information</li>
+                <li>Arrive on time; late arrivals may not be permitted to enter to avoid disruption</li>
+                <li>Refrain from using mobile phones during sessions</li>
               </ul>
             </section>
 
             <section className="mb-8">
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">7. Intellectual Property</h2>
+              <h2 className="text-2xl font-semibold text-gray-900 mb-4">7. Personal Belongings</h2>
               <p className="mb-4">
-                All content, methods, and materials used in our services are the intellectual property 
-                of {About.companyName} or licensed to us. You may not reproduce, distribute, or 
+                You are responsible for your personal belongings. {About.companyName} is not liable for any
+                lost, stolen, or damaged items. We recommend that you do not bring valuables into the studio.
+              </p>
+            </section>
+
+            <section className="mb-8">
+              <h2 className="text-2xl font-semibold text-gray-900 mb-4">8. Intellectual Property</h2>
+              <p className="mb-4">
+                All content, methods, and materials used in our services are the intellectual property
+                of {About.companyName} or licensed to us. You may not reproduce, distribute, or
                 use our proprietary methods without written permission.
               </p>
             </section>
 
             <section className="mb-8">
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">8. Privacy and Confidentiality</h2>
+              <h2 className="text-2xl font-semibold text-gray-900 mb-4">9. Privacy and Confidentiality</h2>
               <p className="mb-4">
-                Your privacy is important to us. Please review our Privacy Policy for information 
-                about how we collect, use, and protect your personal information. Health information 
-                shared with instructors will be kept confidential and used only for providing safe, 
+                Your privacy is important to us. Please review our Privacy Policy for information
+                about how we collect, use, and protect your personal information. Health information
+                shared with instructors will be kept confidential and used only for providing safe,
                 effective instruction.
               </p>
             </section>
 
             <section className="mb-8">
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">9. Termination</h2>
+              <h2 className="text-2xl font-semibold text-gray-900 mb-4">10. Termination</h2>
               <p className="mb-4">
-                We reserve the right to terminate or suspend your access to our services at any time 
-                for violation of these terms, inappropriate behavior, or safety concerns. Upon termination, 
+                We reserve the right to terminate or suspend your access to our services at any time
+                for violation of these terms, inappropriate behavior, or safety concerns. Upon termination,
                 you must cease all use of our services.
               </p>
             </section>
 
             <section className="mb-8">
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">10. Force Majeure</h2>
+              <h2 className="text-2xl font-semibold text-gray-900 mb-4">11. Force Majeure</h2>
               <p className="mb-4">
-                We are not liable for any failure to perform our obligations due to circumstances 
-                beyond our reasonable control, including but not limited to natural disasters, 
+                We are not liable for any failure to perform our obligations due to circumstances
+                beyond our reasonable control, including but not limited to natural disasters,
                 government regulations, or public health emergencies.
               </p>
             </section>
 
             <section className="mb-8">
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">11. Governing Law</h2>
+              <h2 className="text-2xl font-semibold text-gray-900 mb-4">12. Governing Law</h2>
               <p className="mb-4">
-                These terms are governed by the laws of the Commonwealth of Pennsylvania. 
+                These terms are governed by the laws of the Commonwealth of Pennsylvania.
                 Any disputes will be resolved in the courts of Allegheny County, Pennsylvania.
               </p>
             </section>
 
             <section className="mb-8">
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">12. Changes to Terms</h2>
+              <h2 className="text-2xl font-semibold text-gray-900 mb-4">13. Changes to Terms</h2>
               <p className="mb-4">
-                We reserve the right to modify these terms at any time. We will notify you of 
-                material changes by posting updated terms on our website. Continued use of our 
+                We reserve the right to modify these terms at any time. We will notify you of
+                material changes by posting updated terms on our website. Continued use of our
                 services after changes constitutes acceptance of the new terms.
               </p>
             </section>
 
             <section className="mb-8">
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">13. Contact Information</h2>
+              <h2 className="text-2xl font-semibold text-gray-900 mb-4">14. Contact Information</h2>
               <p className="mb-4">
                 If you have questions about these Terms of Service, please contact us:
               </p>
@@ -210,9 +230,9 @@ export default function Page() {
             </section>
 
             <section className="mb-8">
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">14. Acknowledgment</h2>
+              <h2 className="text-2xl font-semibold text-gray-900 mb-4">15. Acknowledgment</h2>
               <p className="mb-4">
-                By booking and using our services, you acknowledge that you have read, understood, 
+                By booking and using our services, you acknowledge that you have read, understood,
                 and agree to be bound by these Terms of Service.
               </p>
             </section>

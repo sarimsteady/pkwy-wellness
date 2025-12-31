@@ -2,7 +2,6 @@ import { Button } from "@/components/ui/button";
 import { SACRED_MOVEMENT_CLASS_STRIPE_LINK } from "@/config/offerings";
 import { Fonts } from "@/config/fonts";
 import { ClockIcon, HeartIcon, UsersIcon, ExternalLink } from "lucide-react";
-import Image from "next/image";
 
 export function SacredMovementClasses() {
     return (
@@ -83,17 +82,6 @@ export function SacredMovementClasses() {
                                     </Button>
                                 </a>
                             </div>
-                        </div>
-
-                        <div className="relative aspect-[4/3] rounded-[2.5rem] overflow-hidden bg-stone-100 border border-stone-100 group-hover:shadow-2xl transition-all duration-700">
-                            <Image
-                                src="/misc/pilates-session-3.png"
-                                alt="Pilates session"
-                                fill
-                                className="object-cover group-hover:scale-105 transition-transform duration-700"
-                            />
-                            {/* Overlay to ensure depth */}
-                            <div className="absolute inset-0 bg-stone-900/5 group-hover:bg-transparent transition-colors duration-700" />
                         </div>
                     </div>
                 </div>
