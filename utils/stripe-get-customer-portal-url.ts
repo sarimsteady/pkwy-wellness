@@ -23,7 +23,7 @@ export async function getCustomerPortalUrl(email: string) {
         // 2. Create a Billing Portal session
         const portalSession = await stripeClient.billingPortal.sessions.create({
             customer: customerId,
-            return_url: `${process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000'}/dashboard`,
+            return_url: `${(process.env.VERCEL_ENV === "production" || process.env.NODE_ENV === "production") ? 'https://pkwywellness.com' : 'http://localhost:3000'}/dashboard`,
         });
 
         return { url: portalSession.url };
