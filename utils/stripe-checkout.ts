@@ -19,7 +19,7 @@ export async function stripeCheckout(
         const amountInCents = Math.round(amount * 100);
 
         const sessionParams: Stripe.Checkout.SessionCreateParams = {
-            payment_method_types: ['card'],
+            payment_method_types: ['card', 'amazon_pay', 'link'],
             line_items: [
                 {
                     price_data: {
