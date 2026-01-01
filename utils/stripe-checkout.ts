@@ -66,8 +66,8 @@ async function getBaseUrl(): Promise<string> {
     }
 
     // Try Vercel URL
-    if (process.env.VERCEL_URL) {
-        return `https://${process.env.VERCEL_URL}`;
+    if (process.env.VERCEL_ENV === "production") {
+        return `https://pkwywellness.com`;
     }
 
     // Fallback: try to get from headers (for server-side)
